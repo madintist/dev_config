@@ -1,2 +1,3 @@
-# init.vim
-Configuration for Neovim
+# Dev Config
+
+Configuration files for my developer environment. Currently WIP.
