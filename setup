@@ -1,5 +1,16 @@
 #!/bin/bash
 
-TARGET_DIRECTORY=~/.config/nvim
+# Set up Neovim config
+NVIM_DIRECTORY=~/.config/nvim
+NVIM_INIT=./init.vim
 
-echo $TARGET_DIRECTORY
+if [ ! -d "$NVIM_DIRECTORY" ]; then
+	echo "The directory doesn't exist"
+  #mkdir -p $NVIM_DIRECTORY
+fi
+
+#if [ -f "$NVIM_DIRECTORY/init.vim" ]; then
+#  rm -f $NVIM_DIRECTORY/init.vim
+#fi
+
+#ln -s ./init.nvim $NVIM_DIRECTORY/init.vim
