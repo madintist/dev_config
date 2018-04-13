@@ -8,8 +8,8 @@ if [ ! -d "$NVIM_DIRECTORY" ]; then
   mkdir -p $NVIM_DIRECTORY
 fi
 
-if [ -f "$NVIM_DIRECTORY/init.vim" ]; then
-  rm -f $NVIM_DIRECTORY/init.vim
-fi
+#if [ -f "$NVIM_DIRECTORY/init.vim" ]; then
+#  rm -f $NVIM_DIRECTORY/init.vim
+#fi
 
-ln -s ./init.nvim $NVIM_DIRECTORY/init.vim
+#ln -s ./init.nvim $NVIM_DIRECTORY/init.vim
