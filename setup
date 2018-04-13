@@ -1,0 +1,5 @@
+#!/bin/bash
+
+TARGET_DIRECTORY=~/.config/nvim
+
+echo $TARGET_DIRECTORY
