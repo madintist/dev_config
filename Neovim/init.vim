@@ -40,6 +40,9 @@ set foldlevelstart=10 " Only hide deeply nested code by default
 set foldmethod=indent " Fold code based on indentation
 set foldnestmax=10    " Don't allow absurdly deep folding
 
+" General
+set modelines=1 " Look for modelines in files
+
 " Indentation
 filetype indent on " Turn on filetype based indentation
 set tabstop=2      " Indent 2 spaces
