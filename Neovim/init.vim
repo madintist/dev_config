@@ -50,4 +50,11 @@ nnoremap <leader>u :MundoToggle<CR>      " Toggle Mundo undo panel
 " Plugin Configuration |
 "----------------------|
 
+" Ack / Ag
 let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
+
+" CtrlP
+let g:ctrlp_match_window = 'bottom,order:ttb'         " Order search from top to bottom
+let g:ctrlp_switch_buffer = 0                         " Open files in new buffers
+let g:ctrlp_working_path_mode = 0                     " Allow working path changes
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search

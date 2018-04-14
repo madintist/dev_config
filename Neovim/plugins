@@ -22,6 +22,11 @@ if [ ! -d $NVIM_PLUGINS/ack ]; then
         git clone git://github.com/mileszs/ack.vim $NVIM_PLUGINS/ack
 fi
 
+# CtrlP
+if [ ! -d $NVIM_PLUGINS/ctrlp ]; then
+        git clone git://github.com/ctrlpvim/ctrlp.vim $NVIM_PLUGINS/ctrlp
+fi
+
 # Mundo
 if [ ! -d $NVIM_PLUGINS/vim-mundo ]; then
         git clone git://github.com/simnalamburt/vim-mundo $NVIM_PLUGINS/vim-mundo
