@@ -5,7 +5,11 @@
 ############
 
 # Check that Homebrew is installed
-command -v brew > /dev/null 2>&1 || { echo >&2 "Homebrew must be installed to run this script."; exit 1; }
+command -v brew >/dev/null 2>&1
+if [ ! $? -eq 0 ]; then
+	echo "Homebrew must be installed to run this script. Aborting."
+	exit 1
+fi
 
 ##########
 # Neovim #
