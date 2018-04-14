@@ -94,5 +94,9 @@ let g:ctrlp_working_path_mode = 0                     " Allow working path chang
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
 " }}}
 
+" GitGutter {{{
+set updatetime=100 " Update GitGutter signs more often
+" }}}
+
 
 " vim:foldmethod=marker:foldlevel=0
