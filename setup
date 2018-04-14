@@ -1,50 +1,47 @@
 #!/bin/sh
 
+#############
+# Functions #
+#############
+
+# Argument $1: The name of the Homebrew package
+# Argument $2: Optional custom code to run instead of Homebrew install
+check_dependency () {
+        command -v $1 >/dev/null 2>&1
+        if [ ! $? -eq 0 ]; then
+                if [ -z "$2" ]; then
+                        echo "Installing $1"
+                        brew update
+                        brew install $1
+                else
+                        echo "Executing custom commands:\n"
+                        eval $2
+                fi
+        fi
+}
+
 ############
 # Homebrew #
 ############
 
 # Check that Homebrew is installed
+# Do this manually because we need it for the check_dependency function
 command -v brew >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
         echo "Homebrew must be installed to run this script. Aborting."
         exit 1
 fi
 
-############################
-# Ag - The Silver Searcher #
-############################
+check_dependency "ag" "brew update && brew install the_silver_searcher"
+check_dependency "git"
+check_dependency "nvim"
+check_dependency "python"
 
-# Check that Ag is installed. Install if not
-command -v ag >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-        brew update
-        brew install the_silver_searcher
-fi
-
-#######
-# Git #
-#######
-
-# Check that Git is installed. Install if not
-command -v git >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-        brew update
-        brew install git
-fi
-
-##########
-# Neovim #
-##########
+########################
+# Neovim Configuration #
+########################
 
 NVIM_DIRECTORY=~/.config/nvim
-
-# Check that Neovim is installed. Install if not
-command -v nvim >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-        brew update
-        brew install neovim
-fi
 
 # Make sure that the directory exists
 if [ ! -d $NVIM_DIRECTORY ]; then
