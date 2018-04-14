@@ -7,3 +7,4 @@ execute pathogen#infect()
 " Colors
 colorscheme solarized
 set background=dark
+syntax enable
