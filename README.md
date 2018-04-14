@@ -2,9 +2,15 @@
 
 Configuration files for my developer environment. Currently WIP.
 
+## Prerequisites
+
+You must have the following installed to use this config:
+
+- [Homebrew](https://brew.sh/)
+
 ## Setup
 
-- TODO
+Run `./setup` to symlink the config files into their proper places.
 
 ## Contents
 
