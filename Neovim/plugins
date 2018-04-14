@@ -17,9 +17,9 @@ fi
 
 NVIM_PLUGINS=~/.config/nvim/bundle
 
-# Gundo
-if [ ! -d $NVIM_PLUGINS/gundo ]; then
-        git clone git://github.com/sjl/gundo.vim $NVIM_PLUGINS/gundo
+# Mundo
+if [ ! -d $NVIM_PLUGINS/vim-mundo ]; then
+        git clone git://github.com/simnalamburt/vim-mundo $NVIM_PLUGINS/vim-mundo
 fi
 
 # Solarized Color Scheme
