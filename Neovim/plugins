@@ -15,22 +15,22 @@ fi
 # Functions #
 #############
 
-NVIM_PLUGINS=~/.config/nvim/bundle
+nvim_plugins=~/.config/nvim/bundle
 
 # This will load a plugin from Github
 # Use like this: load_plugin "mileszs/ack.vim"
 load_plugin () {
-        ACCOUNT=$( echo $1 | cut -d'/' -f1 )
-        PLUGIN=$( echo $1 | cut -d'/' -f2 )
+        account=$( echo $1 | cut -d'/' -f1 )
+        plugin=$( echo $1 | cut -d'/' -f2 )
 
         # If the plugin hasn't been loaded load it
-        if [ ! -d $NVIM_PLUGINS/$PLUGIN ]; then
+        if [ ! -d $nvim_plugins/$plugin ]; then
                 echo Loading: $1
-                git clone git://github.com/$ACCOUNT/$PLUGIN $NVIM_PLUGINS/$PLUGIN
+                git clone git://github.com/$account/$plugin $nvim_plugins/$plugin
                 echo "\n"
         else
                 echo Updating: $1
-                cd $NVIM_PLUGINS/$PLUGIN
+                cd $nvim_plugins/$plugin
                 git pull
                 echo "\n"
         fi
@@ -56,4 +56,4 @@ load_plugin "simnalamburt/vim-mundo"
 load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
 load_plugin "vim-syntastic/syntastic"
-load_plugin "valloric/youcompleteme" "cd $NVIM_PLUGINS/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"
+load_plugin "valloric/youcompleteme" "cd $nvim_plugins/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"
