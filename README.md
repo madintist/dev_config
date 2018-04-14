@@ -29,6 +29,8 @@ Run `./setup` to symlink the config files into their proper places.
       - This will be configured to use `ag` as the search executable in place of `ack`.
     - [CtrlP](http://ctrlpvim.github.io/ctrlp.vim/)
       - Fuzzy finder for files, buffers, tags, etc.
+    - [GitGutter](https://github.com/airblade/vim-gitgutter)
+      - Show the Git diff in the gutter.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
       - Undo tree visualization. Like Gundo, but works with Neovim.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
