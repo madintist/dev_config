@@ -81,17 +81,6 @@ nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
 " }}}
 
 
-" Statusline {{{
-
-" Syntastic {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-" }}}
-
-" }}}
-
-
 " Plugin Configuration {{{
 
 " Ack / Ag {{{
@@ -109,11 +98,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
 set updatetime=100 " Update GitGutter signs more often
 " }}}
 
-" Syntastic {{{
-let g:syntastic_always_populate_loc_list = 1 " Automatically update error location list
-let g:syntastic_auto_loc_list = 1            " Automatically show error list when there are errors
-let g:syntastic_check_on_open = 1            " Check for errors on open and save
-let g:syntastic_check_on_wq = 0              " Don't check when closing
 " }}}
 
 
