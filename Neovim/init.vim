@@ -10,7 +10,8 @@ set background=dark   " Use the dark version of Solarized
 syntax enable         " Use syntax highlighting
 
 " Folding
-set foldenable " Turn on code folding
+set foldenable        " Turn on code folding
+set foldlevelstart=10 " Only hide deeply nested code by default
 
 " Indentation
 set tabstop=2      " Indent 2 spaces
