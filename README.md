@@ -38,5 +38,7 @@ Run `./setup` to symlink the config files into their proper places.
       - Show the Git diff in the gutter.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
       - Undo tree visualization. Like Gundo, but works with Neovim.
+    - [Polyglot](https://github.com/sheerun/vim-polyglot)
+      - Basically every language pack you'll ever need. Except for Io.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
       - Color scheme. I use the dark variation.
