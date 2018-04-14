@@ -8,6 +8,13 @@ execute pathogen#infect()
 " Basic Configuration |
 "---------------------|
 
+" Backups
+set backup
+set backupdir=~/.nvim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.nvim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
 " Colors
 colorscheme solarized " Use the Solarized colorscheme
 set background=dark   " Use the dark version of Solarized
