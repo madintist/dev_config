@@ -36,7 +36,8 @@ check_dependency "ag" "brew update && brew install the_silver_searcher"
 check_dependency "git"
 check_dependency "nvim"
 check_dependency "python"
-# TODO: Install Node.js / NPM
+check_dependency "node"
+check_dependency "npm"
 
 ########################
 # Neovim Configuration #
@@ -73,3 +74,12 @@ fi
 
 # Install Pathogen Plugins
 ./Neovim/plugins
+
+#########################
+# Node.js Configuration #
+#########################
+
+# TODO: Do this the right way.
+
+# Install prettier-standard (since we use this for work)
+check_dependency "prettier-standard" "npm i prettier-standard -g"

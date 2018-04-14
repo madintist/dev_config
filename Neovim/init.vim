@@ -87,6 +87,12 @@ nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
 let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
 " }}}
 
+" ALE {{{
+let g:ale_fixers = {'javascript': ['prettier-standard']} " Use prettier-standard for JavaScript
+let g:ale_linters = {'javascript': ['']}
+let g:ale_fix_on_save = 1                                " Fix files on save
+" }}}
+
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'         " Order search from top to bottom
 let g:ctrlp_switch_buffer = 0                         " Open files in new buffers
