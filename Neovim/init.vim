@@ -97,4 +97,4 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
 " }}}
 
 
-" vim:foldmethod=marker;foldlevel=0
+" vim:foldmethod=marker:foldlevel=0
