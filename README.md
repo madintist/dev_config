@@ -14,14 +14,19 @@ Run `./setup` to symlink the config files into their proper places.
 
 ## Contents
 
+- [Ag - The Silver Searcher](https://geoff.greer.fm/ag/)
+  - Much better than `ack` or `grep`.
 - [Git](https://git-scm.com/)
-  - Will install via Homebrew if it's not available
-  - [ ] **TODO:** Automate Git configuration
+  - Will install via Homebrew if it's not available.
+  - [ ] **TODO:** Automate Git configuration.
 - [Neovim](https://neovim.io/)
-  - `./Neovim/init.vim`
-  - Will be symlinked to `~/.config/nvim/init.vim`
-  - Will install [Pathogen](https://github.com/tpope/vim-pathogen)
+  - `./Neovim/init.vim`.
+  - Will be symlinked to `~/.config/nvim/init.vim`.
+  - Will install [Pathogen](https://github.com/tpope/vim-pathogen).
   - Will install the following plugins:
+    - [Ack](https://github.com/mileszs/ack.vim)
+      - Enhanced searching.
+      - This will be configured to use `ag` as the search executable in place of `ack`.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
       - Undo tree visualization. Like Gundo, but works with Neovim.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
