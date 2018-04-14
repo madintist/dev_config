@@ -17,9 +17,10 @@ fi
 
 NVIM_DIRECTORY=~/.config/nvim
 
-# Check that Neovim is installed
+# Check that Neovim is installed. Install if not
 command -v nvim >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
+	brew update
 	brew install neovim
 fi
 
