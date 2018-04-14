@@ -23,9 +23,22 @@ load_plugin () {
         ACCOUNT=$( echo $1 | cut -d'/' -f1 )
         PLUGIN=$( echo $1 | cut -d'/' -f2 )
 
+        # If the plugin hasn't been loaded load it
         if [ ! -d $NVIM_PLUGINS/$PLUGIN ]; then
                 echo Loading: $1
                 git clone git://github.com/$ACCOUNT/$PLUGIN $NVIM_PLUGINS/$PLUGIN
+                echo "\n"
+        else
+                echo Updating: $1
+                cd $NVIM_PLUGINS/$PLUGIN
+                git pull
+                echo "\n"
+        fi
+
+        # Execute additional commands
+        if [ ! -z "$2" ]; then
+                echo "Executing custom commands"
+                eval "$2"
                 echo "\n"
         fi
 }
@@ -43,4 +56,4 @@ load_plugin "simnalamburt/vim-mundo"
 load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
 load_plugin "vim-syntastic/syntastic"
-load_plugin "valloric/youcompleteme"
+load_plugin "valloric/youcompleteme" "cd $NVIM_PLUGINS/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"

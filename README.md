@@ -46,3 +46,4 @@ Run `./setup` to symlink the config files into their proper places.
       - Syntax checking.
     - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
       - Code completion engine.
+      - Will install with additional JavaScript support
