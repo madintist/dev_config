@@ -63,10 +63,10 @@ set wildmenu   " Use the wildmenu autocomplete with :e
 " Keybindings |
 "-------------|
 
-nnoremap <leader><space> :nohlsearch<CR>      " Turn off search highlighting
+nnoremap <leader><space> :nohlsearch<CR>             " Turn off search highlighting
 nnoremap <leader>a :Ack
-nnoremap <leader>n :ToggleRelativeNumbers<CR> " Toggle normal / relative line numbers
-nnoremap <leader>u :MundoToggle<CR>           " Toggle Mundo undo panel
+nnoremap <leader>n :call ToggleRelativeNumbers()<CR> " Toggle normal / relative line numbers
+nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
 
 "----------------------|
 " Plugin Configuration |
