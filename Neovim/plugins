@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#################
+# Prerequisites #
+#################
+
+# Check if Git is installed
+command -v git >/dev/null 2>&1
+if [ ! $? -eq 0 ]; then
+	echo "Git must be installed to run this script. Aborting."
+	exit 1
+fi
+
+###############################
+# Load missing Neovim plugins #
+###############################
+
+NVIM_PLUGINS=~/.config/nvim/bundle
+
+if [ ! -d $NVIM_PLUGINS/vim-colors-solarized ]; then
+	git clone git://github.com/altercation/vim-colors-solarized.git $NVIM_PLUGINS/vim-colors-solarized
+fi
