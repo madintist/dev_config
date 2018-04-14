@@ -28,7 +28,7 @@ if [ ! -d $NVIM_PLUGINS/ctrlp ]; then
 fi
 
 # GitGutter
-if [ ! -d $NVIM_PLUGINS/gitgutter ]; then
+if [ ! -d $NVIM_PLUGINS/vim-gitgutter ]; then
         git clone git://github.com/airblade/vim-gitgutter $NVIM_PLUGINS/vim-gitgutter
 fi
 
@@ -38,7 +38,7 @@ if [ ! -d $NVIM_PLUGINS/vim-mundo ]; then
 fi
 
 if [ ! -d $NVIM_PLUGINS/vim-polyglot ]; then
-        git clone git://github.com/vim-polyglot $NVIM_PLUGINS/vim-polyglot
+        git clone git://github.com/sheerun/vim-polyglot $NVIM_PLUGINS/vim-polyglot
 fi
 
 # Solarized Color Scheme
