@@ -11,42 +11,35 @@ if [ ! $? -eq 0 ]; then
         exit 1
 fi
 
-###############################
-# Load missing Neovim plugins #
-###############################
+#############
+# Functions #
+#############
 
 NVIM_PLUGINS=~/.config/nvim/bundle
 
-# Ack
-if [ ! -d $NVIM_PLUGINS/ack ]; then
-        git clone git://github.com/mileszs/ack.vim $NVIM_PLUGINS/ack
-fi
+# This will load a plugin from Github
+# Use like this: load_plugin "mileszs/ack.vim"
+load_plugin () {
+        ACCOUNT=$( echo $1 | cut -d'/' -f1 )
+        PLUGIN=$( echo $1 | cut -d'/' -f2 )
 
-# CtrlP
-if [ ! -d $NVIM_PLUGINS/ctrlp ]; then
-        git clone git://github.com/ctrlpvim/ctrlp.vim $NVIM_PLUGINS/ctrlp
-fi
+        if [ ! -d $NVIM_PLUGINS/$PLUGIN ]; then
+                echo Loading: $1
+                git clone git://github.com/$ACCOUNT/$PLUGIN $NVIM_PLUGINS/$PLUGIN
+                echo "\n"
+        fi
+}
 
-# GitGutter
-if [ ! -d $NVIM_PLUGINS/vim-gitgutter ]; then
-        git clone git://github.com/airblade/vim-gitgutter $NVIM_PLUGINS/vim-gitgutter
-fi
+#######################
+# Load Neovim plugins #
+#######################
 
-# Mundo
-if [ ! -d $NVIM_PLUGINS/vim-mundo ]; then
-        git clone git://github.com/simnalamburt/vim-mundo $NVIM_PLUGINS/vim-mundo
-fi
+echo "Loading Neovim plugins:\n"
 
-if [ ! -d $NVIM_PLUGINS/vim-polyglot ]; then
-        git clone git://github.com/sheerun/vim-polyglot $NVIM_PLUGINS/vim-polyglot
-fi
-
-# Solarized Color Scheme
-if [ ! -d $NVIM_PLUGINS/vim-colors-solarized ]; then
-        git clone git://github.com/altercation/vim-colors-solarized.git $NVIM_PLUGINS/vim-colors-solarized
-fi
-
-# Syntastic
-if [ ! -d $NVIM_PLUGINS/syntastic ]; then
-        git clone git://github.com/vim-syntastic/syntastic $NVIM_PLUGINS/syntastic
-fi
+load_plugin "mileszs/ack.vim"
+load_plugin "ctrlpvim/ctrlp.vim"
+load_plugin "airblade/vim-gitgutter"
+load_plugin "simnalamburt/vim-mundo"
+load_plugin "sheerun/vim-polyglot"
+load_plugin "altercation/vim-colors-solarized"
+load_plugin "vim-syntastic/syntastic"
