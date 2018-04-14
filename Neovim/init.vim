@@ -20,3 +20,4 @@ filetype indent on " Turn on filetype based indentation
 set cursorline " Highlight the current line
 set number     " Show line numbers
 set showcmd    " Show the last command that we ran
+set wildmenu   " Use the wildmenu autocomplete with :e
