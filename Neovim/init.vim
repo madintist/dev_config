@@ -23,3 +23,9 @@ set number     " Show line numbers
 set showcmd    " Show the last command that we ran
 set showmatch  " Highlight matching braces and stuff
 set wildmenu   " Use the wildmenu autocomplete with :e
+
+" Searching
+set incsearch                            " Search as we enter characters
+set hlsearch                             " Highlight search results
+
+nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlighting
