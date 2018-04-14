@@ -17,6 +17,11 @@ fi
 
 NVIM_PLUGINS=~/.config/nvim/bundle
 
+# Ack
+if [ ! -d $NVIM_PLUGINS/ack ]; then
+        git clone git://github.com/mileszs/ack.vim $NVIM_PLUGINS/ack
+fi
+
 # Mundo
 if [ ! -d $NVIM_PLUGINS/vim-mundo ]; then
         git clone git://github.com/simnalamburt/vim-mundo $NVIM_PLUGINS/vim-mundo

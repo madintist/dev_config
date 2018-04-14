@@ -4,6 +4,10 @@
 " Run Pathogen
 execute pathogen#infect()
 
+"---------------------|
+" Basic Configuration |
+"---------------------|
+
 " Colors
 colorscheme solarized " Use the Solarized colorscheme
 set background=dark   " Use the dark version of Solarized
@@ -16,19 +20,15 @@ set foldmethod=indent " Fold code based on indentation
 set foldnestmax=10    " Don't allow absurdly deep folding
 
 " Indentation
+filetype indent on " Turn on filetype based indentation
 set tabstop=2      " Indent 2 spaces
 set softtabstop=2  " Tab will indent by 2 spaces
 set expandtab      " Force spaces instead of tabs
 
-filetype indent on " Turn on filetype based indentation
-
-" Keybindings
-nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlighting
-nnoremap <leader>u :MundoToggle<CR>      " Toggle Mundo undo panel
-
 " Searching
-set incsearch                            " Search as we enter characters
-set hlsearch                             " Highlight search results
+set incsearch " Search as we enter characters
+set hlsearch  " Highlight search results
+
 
 " UI
 set cursorline " Highlight the current line
@@ -37,3 +37,17 @@ set number     " Show line numbers
 set showcmd    " Show the last command that we ran
 set showmatch  " Highlight matching braces and stuff
 set wildmenu   " Use the wildmenu autocomplete with :e
+
+"-------------|
+" Keybindings |
+"-------------|
+
+nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlighting
+nnoremap <leader>a :Ack
+nnoremap <leader>u :MundoToggle<CR>      " Toggle Mundo undo panel
+
+"----------------------|
+" Plugin Configuration |
+"----------------------|
+
+let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
