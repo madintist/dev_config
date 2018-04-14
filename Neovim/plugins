@@ -15,7 +15,25 @@ fi
 # Functions #
 #############
 
+# Directory where Neovim plugins are written
 nvim_plugins=~/.config/nvim/bundle
+
+# An array of the plugins that are supposed to be installed
+plugin_list=()
+
+# This will delete any plugins that aren't supposed to be installed anymore
+clean_plugins () {
+        # For each plugin that's currently installed
+        for plugin in $(ls $nvim_plugins); do
+                # Check if it SHOULD be installed
+                if [ ! "${plugin_list[@]}" =~ "$plugin" ]; then
+                        # If not delete it
+                        echo "Deleting $plugin"
+                        rm -rf $nvim_plugins/$plugin
+                        echo "\n"
+                fi
+        done
+}
 
 # This will load a plugin from Github
 # Use like this: load_plugin "mileszs/ack.vim"
@@ -41,6 +59,9 @@ load_plugin () {
                 eval "$2"
                 echo "\n"
         fi
+
+        # Append to the plugin list array
+        plugin_list+=("$plugin")
 }
 
 #######################
@@ -57,3 +78,5 @@ load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
 load_plugin "vim-syntastic/syntastic"
 load_plugin "valloric/youcompleteme" "cd $nvim_plugins/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"
+
+clean_plugins
