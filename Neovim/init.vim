@@ -9,14 +9,14 @@ execute pathogen#infect()
 " Custom Functions {{{
 
 " Toggle normal / relative line numbers
-function! ToggleRelativeNumbers()
+function! ToggleRelativeNumbers() " {{{
         if(&relativenumber == 1)
                 set norelativenumber
                 set number
         else
                 set relativenumber
         endif
-endfunc
+endfunc " }}}
 
 " }}}
 
