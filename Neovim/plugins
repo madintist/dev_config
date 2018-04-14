@@ -71,6 +71,7 @@ load_plugin () {
 printf "Loading Neovim plugins:\n"
 
 load_plugin "mileszs/ack.vim"
+load_plugin "w0rp/ale"
 load_plugin "ctrlpvim/ctrlp.vim"
 load_plugin "airblade/vim-gitgutter"
 load_plugin "simnalamburt/vim-mundo"

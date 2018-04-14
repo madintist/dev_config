@@ -32,6 +32,8 @@ Run `./setup` to symlink the config files into their proper places.
     - [Ack](https://github.com/mileszs/ack.vim)
       - Enhanced searching.
       - This will be configured to use `ag` as the search executable in place of `ack`.
+    - [ALE](https://github.com/w0rp/ale)
+      - Async linting.
     - [CtrlP](http://ctrlpvim.github.io/ctrlp.vim/)
       - Fuzzy finder for files, buffers, tags, etc.
     - [GitGutter](https://github.com/airblade/vim-gitgutter)
