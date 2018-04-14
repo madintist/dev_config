@@ -7,7 +7,7 @@
 # Check if Git is installed
 command -v git >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
-        echo "Git must be installed to run this script. Aborting."
+        printf "Git must be installed to run this script. Aborting.\n"
         exit 1
 fi
 
@@ -28,9 +28,9 @@ clean_plugins () {
                 # Check if it SHOULD be installed
                 if [[ ! "${plugin_list[@]}" =~ "$plugin" ]]; then
                         # If not delete it
-                        echo "Deleting $plugin"
+                        printf "Deleting %s\n" $plugin
                         rm -rf $nvim_plugins/$plugin
-                        echo "\n"
+                        printf "\n"
                 fi
         done
 }
@@ -43,21 +43,21 @@ load_plugin () {
 
         # If the plugin hasn't been loaded load it
         if [ ! -d $nvim_plugins/$plugin ]; then
-                echo Loading: $1
+                printf "Loading %s\n" $1
                 git clone git://github.com/$account/$plugin $nvim_plugins/$plugin
-                echo "\n"
+                printf "\n"
         else
-                echo Updating: $1
+                printf "Updating %s\n" $1
                 cd $nvim_plugins/$plugin
                 git pull
-                echo "\n"
+                printf "\n"
         fi
 
         # Execute additional commands
         if [ ! -z "$2" ]; then
-                echo "Executing custom commands"
+                printf "Executing custom commands\n"
                 eval "$2"
-                echo "\n"
+                printf "\n"
         fi
 
         # Append to the plugin list array
@@ -68,7 +68,7 @@ load_plugin () {
 # Load Neovim plugins #
 #######################
 
-echo "Loading Neovim plugins:\n"
+printf "Loading Neovim plugins:\n"
 
 load_plugin "mileszs/ack.vim"
 load_plugin "ctrlpvim/ctrlp.vim"
@@ -76,7 +76,6 @@ load_plugin "airblade/vim-gitgutter"
 load_plugin "simnalamburt/vim-mundo"
 load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
-load_plugin "vim-syntastic/syntastic"
 load_plugin "valloric/youcompleteme" "cd $nvim_plugins/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"
 
 clean_plugins
