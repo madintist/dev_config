@@ -6,6 +6,8 @@
 
 NVIM_DIRECTORY=~/.config/nvim
 
+# TODO: Check that Neovim is installed
+
 # Make sure that the directory exists
 if [ ! -d $NVIM_DIRECTORY ]; then
 	mkdir -p $NVIM_DIRECTORY
