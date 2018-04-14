@@ -7,8 +7,8 @@
 # Check that Homebrew is installed
 command -v brew >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
-  echo "Homebrew must be installed to run this script. Aborting."
-  exit 1
+        echo "Homebrew must be installed to run this script. Aborting."
+        exit 1
 fi
 
 #######
@@ -18,8 +18,8 @@ fi
 # Check that Git is installed. Install if not
 command -v git >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
-  brew update
-  brew install git
+        brew update
+        brew install git
 fi
 
 ##########
@@ -31,18 +31,18 @@ NVIM_DIRECTORY=~/.config/nvim
 # Check that Neovim is installed. Install if not
 command -v nvim >/dev/null 2>&1
 if [ ! $? -eq 0 ]; then
-  brew update
-  brew install neovim
+        brew update
+        brew install neovim
 fi
 
 # Make sure that the directory exists
 if [ ! -d $NVIM_DIRECTORY ]; then
-  mkdir -p $NVIM_DIRECTORY
+        mkdir -p $NVIM_DIRECTORY
 fi
 
 # Check for files / symlinks that are already there
 if [ -f $NVIM_DIRECTORY/init.vim ] || [ -h $NVIM_DIRECTORY/init.vim ]; then
-  rm -f $NVIM_DIRECTORY/init.vim
+        rm -f $NVIM_DIRECTORY/init.vim
 fi
 
 # Symlink the config file
@@ -51,15 +51,15 @@ ln -s $PWD/Neovim/init.vim $NVIM_DIRECTORY/init.vim
 # Install Pathogen
 ## First check if the directories for it exist
 if [ ! -d $NVIM_DIRECTORY/autoload ]; then
-  mkdir -p $NVIM_DIRECTORY/autoload
+        mkdir -p $NVIM_DIRECTORY/autoload
 fi
 
 if [ ! -d $NVIM_DIRECTORY/bundle ]; then
-  mkdir -p $NVIM_DIRECTORY/bundle
+        mkdir -p $NVIM_DIRECTORY/bundle
 fi
 
 if [ ! -f $NVIM_DIRECTORY/autoload/pathogen.vim ]; then
-  curl -LSso $NVIM_DIRECTORY/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+        curl -LSso $NVIM_DIRECTORY/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
 # Install Pathogen Plugins
