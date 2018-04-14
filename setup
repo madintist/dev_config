@@ -36,6 +36,7 @@ check_dependency "ag" "brew update && brew install the_silver_searcher"
 check_dependency "git"
 check_dependency "nvim"
 check_dependency "python"
+# TODO: Install Node.js / NPM
 
 ########################
 # Neovim Configuration #
