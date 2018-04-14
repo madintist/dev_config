@@ -70,6 +70,8 @@ set showmatch  " Highlight matching braces and stuff
 set wildmenu   " Use the wildmenu autocomplete with :e
 " }}}
 
+" }}}
+
 
 "-------------|
 " Keybindings {{{
