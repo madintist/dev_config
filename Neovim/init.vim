@@ -22,11 +22,13 @@ set expandtab      " Force spaces instead of tabs
 
 filetype indent on " Turn on filetype based indentation
 
+" Keybindings
+nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlighting
+nnoremap <leader>u :MundoToggle<CR>      " Toggle Mundo undo panel
+
 " Searching
 set incsearch                            " Search as we enter characters
 set hlsearch                             " Highlight search results
-
-nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlighting
 
 " UI
 set cursorline " Highlight the current line
