@@ -5,7 +5,6 @@
 execute pathogen#infect()
 
 
-"------------------|
 " Custom Functions {{{
 
 " Toggle normal / relative line numbers
@@ -21,7 +20,6 @@ endfunc " }}}
 " }}}
 
 
-"---------------------|
 " Basic Configuration {{{
 
 " Backups {{{
@@ -73,7 +71,6 @@ set wildmenu   " Use the wildmenu autocomplete with :e
 " }}}
 
 
-"-------------|
 " Keybindings {{{
 
 nnoremap <leader><space> :nohlsearch<CR>             " Turn off search highlighting
@@ -84,7 +81,6 @@ nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
 " }}}
 
 
-"----------------------|
 " Plugin Configuration {{{
 
 " Ack / Ag {{{
