@@ -26,7 +26,7 @@ clean_plugins () {
         # For each plugin that's currently installed
         for plugin in $(ls $nvim_plugins); do
                 # Check if it SHOULD be installed
-                if [ ! "${plugin_list[@]}" =~ "$plugin" ]; then
+                if [[ ! "${plugin_list[@]}" =~ "$plugin" ]]; then
                         # If not delete it
                         echo "Deleting $plugin"
                         rm -rf $nvim_plugins/$plugin
