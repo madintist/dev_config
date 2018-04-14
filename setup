@@ -11,6 +11,17 @@ if [ ! $? -eq 0 ]; then
 	exit 1
 fi
 
+#######
+# Git #
+#######
+
+# Check that Git is installed. Install if not
+command -v git >/dev/null 2>&1
+if [ ! $? -eq 0 ]; then
+	brew update
+	brew install git
+fi
+
 ##########
 # Neovim #
 ##########
@@ -50,3 +61,6 @@ fi
 if [ ! -f $NVIM_DIRECTORY/autoload/pathogen.vim ]; then
 	curl -LSso $NVIM_DIRECTORY/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
+
+# Install Pathogen Plugins
+./Neovim/plugins

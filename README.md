@@ -14,6 +14,9 @@ Run `./setup` to symlink the config files into their proper places.
 
 ## Contents
 
+- [Git](https://git-scm.com/)
+  - Will install via Homebrew if it's not available
+  - [ ] **TODO:** Automate Git configuration
 - [Neovim](https://neovim.io/)
   - `./Neovim/init.vim`
   - Will be symlinked to `~/.config/nvim/init.vim`
