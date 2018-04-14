@@ -12,6 +12,7 @@ syntax enable         " Use syntax highlighting
 " Folding
 set foldenable        " Turn on code folding
 set foldlevelstart=10 " Only hide deeply nested code by default
+set foldnestmax=10    " Don't allow absurdly deep folding
 
 " Indentation
 set tabstop=2      " Indent 2 spaces
