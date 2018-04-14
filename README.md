@@ -21,3 +21,8 @@ Run `./setup` to symlink the config files into their proper places.
   - `./Neovim/init.vim`
   - Will be symlinked to `~/.config/nvim/init.vim`
   - Will install [Pathogen](https://github.com/tpope/vim-pathogen)
+  - Will install the following plugins:
+    - [Gundo](https://github.com/sjl/gundo)
+      - Undo tree visualization.
+    - [Solarized](https://github.com/altercation/vim-colors-solarized)
+      - Color scheme. I use the dark variation.
