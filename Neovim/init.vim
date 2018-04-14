@@ -83,3 +83,6 @@ let g:ctrlp_match_window = 'bottom,order:ttb'         " Order search from top to
 let g:ctrlp_switch_buffer = 0                         " Open files in new buffers
 let g:ctrlp_working_path_mode = 0                     " Allow working path changes
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
+
+
+" vim:foldmethod=marker;foldlevel=0
