@@ -37,7 +37,7 @@ syntax enable         " Use syntax highlighting
 " Folding
 set foldenable        " Turn on code folding
 set foldlevelstart=10 " Only hide deeply nested code by default
-set foldmethod=marker " Fold code based on markers
+set foldmethod=indent " Fold code based on indentation
 set foldnestmax=10    " Don't allow absurdly deep folding
 
 " Indentation
