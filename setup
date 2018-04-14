@@ -36,3 +36,17 @@ fi
 
 # Symlink the config file
 ln -s $PWD/Neovim/init.vim $NVIM_DIRECTORY/init.vim
+
+# Install Pathogen
+## First check if the directories for it exist
+if [ ! -d $NVIM_DIRECTORY/autoload ]; then
+	mkdir -p $NVIM_DIRECTORY/autoload
+fi
+
+if [ ! -d $NVIM_DIRECTORY/bundle ]; then
+	mkdir -p $NVIM_DIRECTORY/bundle
+fi
+
+if [ ! -f $NVIM_DIRECTORY/autoload/pathogen.vim ]; then
+	curl -LSso $NVIM_DIRECTORY/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
