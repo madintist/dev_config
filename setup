@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Set up Neovim config
+##########
+# Neovim #
+##########
+
 NVIM_DIRECTORY=~/.config/nvim
 
+# Make sure that the directory exists
 if [ ! -d $NVIM_DIRECTORY ]; then
 	mkdir -p $NVIM_DIRECTORY
 fi
@@ -12,4 +16,5 @@ if [ -f $NVIM_DIRECTORY/init.vim ] || [ -h $NVIM_DIRECTORY/init.vim ]; then
 	rm -f $NVIM_DIRECTORY/init.vim
 fi
 
+# Symlink the config file
 ln -s $PWD/Neovim/init.vim $NVIM_DIRECTORY/init.vim
