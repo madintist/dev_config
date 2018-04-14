@@ -14,8 +14,8 @@ Run `./setup` to symlink the config files into their proper places.
 
 ## Scripts
 
-- `./Neovim/update_plugins`
-  - This will pull the most recent version of all Neovim plugins.
+- `./Neovim/plugins`
+  - This will install and / or update all the Neovim plugins.
 
 ## Contents
 
