@@ -42,3 +42,5 @@ Run `./setup` to symlink the config files into their proper places.
       - Basically every language pack you'll ever need. Except for Io.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
       - Color scheme. I use the dark variation.
+    - [Syntastic](https://github.com/vim-syntastic/syntastic)
+      - Syntax checking.
