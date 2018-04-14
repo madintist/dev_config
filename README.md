@@ -12,6 +12,11 @@ You must have the following installed to use this config:
 
 Run `./setup` to symlink the config files into their proper places.
 
+## Scripts
+
+- `./Neovim/update_plugins`
+  - This will pull the most recent version of all Neovim plugins.
+
 ## Contents
 
 - [Ag - The Silver Searcher](https://geoff.greer.fm/ag/)
