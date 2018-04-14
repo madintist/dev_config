@@ -17,3 +17,4 @@ Run `./setup` to symlink the config files into their proper places.
 - [Neovim](https://neovim.io/)
   - `./Neovim/init.vim`
   - Will be symlinked to `~/.config/nvim/init.vim`
+  - Will install [Pathogen](https://github.com/tpope/vim-pathogen)
