@@ -50,5 +50,5 @@ Run `./setup` to symlink the config files into their proper places.
     - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
       - Code completion engine.
       - Will install with additional JavaScript support
-    - **TODO:**
-      - Install `vim-prettier`. This requires Node.js / NPM to be set up.
+  - **TODO:**
+    - Install `vim-prettier`. This requires Node.js / NPM to be set up.
