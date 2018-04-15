@@ -37,6 +37,8 @@ Run `./setup` to symlink the config files into their proper places.
       - **TODO:** Configure.
     - [CtrlP](http://ctrlpvim.github.io/ctrlp.vim/)
       - Fuzzy finder for files, buffers, tags, etc.
+    - [Emmet](http://emmet.io/)
+      - HTML autocomplete on a new level.
     - [GitGutter](https://github.com/airblade/vim-gitgutter)
       - Show the Git diff in the gutter.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
