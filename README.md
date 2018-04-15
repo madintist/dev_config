@@ -20,6 +20,7 @@ Run `./setup` to symlink the config files into their proper places.
   - [ ] **TODO:** Automate Git configuration.
 - [Homebrew](https://brew.sh/)
   - macOS package manager.
+  - Will be installed in `~/homebrew`.
   - We use this to install basically everything.
 - [Neovim](https://neovim.io/)
   - `./Neovim/init.vim`.
