@@ -39,6 +39,8 @@ Run `./setup` to symlink the config files into their proper places.
       - HTML autocomplete on a new level.
     - [GitGutter](https://github.com/airblade/vim-gitgutter)
       - Show the Git diff in the gutter.
+    - [LanguageClient](https://github.com/autozimu/LanguageClient-neovim)
+      - Language Server Protocol support.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
       - Undo tree visualization. Like Gundo, but works with Neovim.
     - [Polyglot](https://github.com/sheerun/vim-polyglot)
