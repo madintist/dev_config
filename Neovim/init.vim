@@ -104,6 +104,15 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
 set updatetime=100 " Update GitGutter signs more often
 " }}}
 
+" LanguageClient {{{
+set hidden
+
+let g:LanguageClient_serverCommands = {
+                        \ 'javascript': ['javascript-typescript-stdio'],
+                        \ 'javascript.jsx': ['javascript-typescript-stdio'],
+                        \}
+" }}}
+
 " }}}
 
 
