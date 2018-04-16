@@ -15,6 +15,8 @@ Run `./setup` to symlink the config files into their proper places.
 
 - [Ag - The Silver Searcher](https://geoff.greer.fm/ag/)
   - Much better than `ack` or `grep`.
+- [Cmake](https://cmake.org/)
+  - We need this to build things.
 - [Git](https://git-scm.com/)
   - Will install via Homebrew if it's not available.
   - [ ] **TODO:** Automate Git configuration.
