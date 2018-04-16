@@ -44,7 +44,8 @@ set foldnestmax=10    " Don't allow absurdly deep folding
 " }}}
 
 " General {{{
-set modelines=1 " Look for modelines in files
+set modelines=1  " Look for modelines in files
+set scrolloff=10 " Show 10 lines of context around cursor when scrolling
 " }}}
 
 " Indentation {{{
