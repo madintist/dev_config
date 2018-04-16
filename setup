@@ -92,4 +92,4 @@ fi
 
 # Install prettier-standard (since we use this for work)
 check_dependency "prettier-standard" "npm i prettier-standard -g"
-check_dependency "language-server" "npm i javascript-typescript-langserver"
+check_dependency "language-server" "npm i javascript-typescript-langserver -g"
