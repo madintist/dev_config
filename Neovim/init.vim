@@ -49,7 +49,6 @@ set scrolloff=10 " Show 10 lines of context around cursor when scrolling
 " }}}
 
 " Indentation {{{
-filetype indent on " Turn on filetype based indentation
 set tabstop=2      " Indent 2 spaces
 set softtabstop=2  " Tab will indent by 2 spaces
 set expandtab      " Force spaces instead of tabs
