@@ -101,7 +101,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " Use Ag to search
 " }}}
 
 " Deoplete {{{
-let g:deoplete#enable_at_startup = 1 " Turn on Deoplete
+let g:deoplete#enable_at_startup = 1                   " Turn on Deoplete
+let g:deoplete#sources = {}                            " Make sources a thing!
+let g:deoplete#sources.javascript = ['LanguageClient'] " Use LangageClient for JavaScript completion
 " }}}
 
 " GitGutter {{{
