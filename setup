@@ -45,7 +45,6 @@ check_dependency "cmake"
 check_dependency "git"
 check_dependency "nvim"
 check_dependency "python"
-check_dependency "pip3" "echo 'pip3 must be installed to run this script. Aborting' && exit 1"
 check_dependency "node"
 check_dependency "npm"
 
