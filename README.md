@@ -57,3 +57,5 @@ Run `./setup` to symlink the config files into their proper places.
 
 List of things that I need to add.
 
+- [ ] Set up Composer / PHP.
+  - We need this for installing [PHP Language Server](https://github.com/felixfbecker/php-language-server)
