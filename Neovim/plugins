@@ -77,7 +77,6 @@ load_plugin "mattn/emmet-vim"
 load_plugin "airblade/vim-gitgutter"
 load_plugin "autozimu/LanguageClient-neovim" "cd $nvim_plugins/LanguageClient-neovim && bash install.sh"
 load_plugin "simnalamburt/vim-mundo"
-load_plugin "roxma/nvim-completion-manager" "pip3 install --user neovim jedi psutil setproctitle"
 load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
 

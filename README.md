@@ -45,9 +45,6 @@ Run `./setup` to symlink the config files into their proper places.
       - Language Server Protocol support.
     - [Mundo](https://github.com/simnalamburt/vim-mundo)
       - Undo tree visualization. Like Gundo, but works with Neovim.
-    - [Nvim Completion Manager](https://github.com/roxma/nvim-completion-manager)
-      - Code completion for Neovim.
-      - We use this because it integrates with LanguageClient.
     - [Polyglot](https://github.com/sheerun/vim-polyglot)
       - Basically every language pack you'll ever need. Except for Io.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
