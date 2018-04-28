@@ -24,21 +24,8 @@ check_dependency () {
 # Homebrew #
 ############
 
-# Check that Homebrew is installed
-# Do this manually because we need it for the check_dependency function
-command -v brew >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-        # If we don't have Homebrew
-        # set it up at ~/homebrew
-
-        if [[ -d ~/homebrew ]]; then
-                rm -rf ~/homebrew
-        fi
-
-        cd ~
-
-        mkdir ~/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
-fi
+# Run Homebrew setup
+./homebrew/setup
 
 check_dependency "ag" "brew update && brew install the_silver_searcher"
 check_dependency "cmake"
