@@ -100,3 +100,8 @@ if [[ ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
         printf "Installing neovim NPM package:\n"
         npm i neovim -g
 fi
+
+if [[ ! "$(gem list)" =~ "neovim" ]]; then
+        printf "Installing the Neovim Ruby Gem:\n"
+        gem install neovim
+fi
