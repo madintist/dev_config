@@ -16,7 +16,7 @@ homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 load_package () {
         command -v $1 >/dev/null 2>&1
         if [[ ! $? -eq 0 ]]; then
-                if [ -z "$2" ]; then
+                if [[ -z "$2" ]]; then
                         printf "Installing %s\n" $1
                         brew install "$1"
                 else
