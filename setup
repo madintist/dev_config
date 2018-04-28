@@ -93,3 +93,10 @@ fi
 # Install prettier-standard (since we use this for work)
 check_dependency "prettier-standard" "npm i prettier-standard -g"
 check_dependency "language-server" "npm i javascript-typescript-langserver -g"
+
+# HACK: This should be part of the Neovim setup file
+# Install the Neovim NPM package
+if [[ ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+        printf "Installing neovim NPM package:\n"
+        npm i neovim -g
+fi
