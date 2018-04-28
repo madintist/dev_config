@@ -1,6 +1,31 @@
 #!/bin/bash
 
+#############
+# Variables #
+#############
+
 $homebrew_url = https://github.com/Homebrew/brew/tarball/master
+
+#############
+# Functions #
+#############
+
+# Install or update a Homebrew package
+# $1 - Name of the installed executable (The package name may be different)
+# $2 - Optional custom install script
+load_package () {
+        # Check if the executable is installed
+        command -v "$1" >/dev/null 2>&1
+        if [[ ! $? -eq 0 ]]; then
+                if [[ -z $2 ]]; then
+                        # If we passed in a custom script
+                        # run it
+                        eval $2
+                else
+                        brew install "$1"
+                fi
+        fi
+}
 
 ####################
 # Install Homebrew #
