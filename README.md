@@ -37,6 +37,9 @@ Run `./setup` to symlink the config files into their proper places.
       - **TODO:** Configure.
     - [CtrlP](http://ctrlpvim.github.io/ctrlp.vim/)
       - Fuzzy finder for files, buffers, tags, etc.
+    - [Deoplete](https://github.com/Shougo/deoplete.nvim)
+      - Autocomplete for Neovim.
+      - Integrates with LanguageClient.
     - [Emmet](http://emmet.io/)
       - HTML autocomplete on a new level.
     - [GitGutter](https://github.com/airblade/vim-gitgutter)
@@ -49,11 +52,10 @@ Run `./setup` to symlink the config files into their proper places.
       - Basically every language pack you'll ever need. Except for Io.
     - [Solarized](https://github.com/altercation/vim-colors-solarized)
       - Color scheme. I use the dark variation.
-    - [YouCompleteMe](http://valloric.github.io/YouCompleteMe/)
-      - Code completion engine.
-      - Will install with additional JavaScript support
 
 ## TODO
 
 List of things that I need to add.
 
+- [ ] Set up Composer / PHP.
+  - We need this for installing [PHP Language Server](https://github.com/felixfbecker/php-language-server)

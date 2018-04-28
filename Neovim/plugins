@@ -73,12 +73,12 @@ printf "Loading Neovim plugins:\n"
 load_plugin "mileszs/ack.vim"
 load_plugin "w0rp/ale"
 load_plugin "ctrlpvim/ctrlp.vim"
+load_plugin "Shougo/deoplete.nvim" "pip3 install neovim"
 load_plugin "mattn/emmet-vim"
 load_plugin "airblade/vim-gitgutter"
 load_plugin "autozimu/LanguageClient-neovim" "cd $nvim_plugins/LanguageClient-neovim && bash install.sh"
 load_plugin "simnalamburt/vim-mundo"
 load_plugin "sheerun/vim-polyglot"
 load_plugin "altercation/vim-colors-solarized"
-load_plugin "valloric/youcompleteme" "cd $nvim_plugins/youcompleteme && git submodule update --init --recursive && ./install.py --js-completer"
 
 clean_plugins
