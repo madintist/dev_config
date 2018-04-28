@@ -56,7 +56,6 @@ brew upgrade
 # Install Hombrew Dependencies #
 ################################
 
-# TODO
 load_package "tldr"
 
 ##################
