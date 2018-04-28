@@ -4,7 +4,7 @@
 # Variables #
 #############
 
-$homebrew_url = https://github.com/Homebrew/brew/tarball/master
+homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 
 #############
 # Functions #
