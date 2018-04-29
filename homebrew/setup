@@ -15,10 +15,12 @@ homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 # $1 - Name of the installed executable (The package name may be different)
 # $2 - Optional custom install script
 load_package () {
-        # TODO: This should check for the package IN HOMEBREW;
-        #       not as an executable.
-        command -v $1 >/dev/null 2>&1
-        if [[ ! $? -eq 0 ]]; then
+        # Get a list of Homebrew packages if we don't have it yet.
+        if [[ ! $homebrew_packages ]]; then
+                homebrew_packages=$(brew list)
+        fi
+
+        if [[ ! "$homebrew_packages" =~ "$1" ]]; then
                 if [[ -z "$2" ]]; then
                         printf "Installing %s\n" $1
                         brew install "$1"
@@ -58,7 +60,6 @@ brew upgrade
 ################################
 # Install Hombrew Dependencies #
 ################################
-
 
 for package in $(cat "$config_dir/homebrew/packages.txt"); do
         load_package "$package"
