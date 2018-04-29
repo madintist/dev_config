@@ -1,3 +1,4 @@
+cmake
 git
 git-flow
 git-lfs
