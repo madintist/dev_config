@@ -1,15 +1,7 @@
 #!/bin/bash
 
-#############
-# Variables #
-#############
-
 config_dir=~/dev_config
 homebrew_url="https://github.com/Homebrew/brew/tarball/master"
-
-#############
-# Functions #
-#############
 
 # Install or update a Homebrew package
 # $1 - Name of the installed executable (The package name may be different)
@@ -31,10 +23,6 @@ load_package () {
         fi
 }
 
-####################
-# Install Homebrew #
-####################
-
 # Is Homebrew installed already?
 command -v brew >/dev/null 2>&1
 if [[ ! $? -eq 0 ]]; then
@@ -50,24 +38,12 @@ if [[ ! $? -eq 0 ]]; then
         mkdir ~/homebrew && curl -L $homebrew_url | tar xz --strip 1 -C homebrew
 fi
 
-###################
-# Update Homebrew #
-###################
-
 brew update
 brew upgrade
-
-################################
-# Install Hombrew Dependencies #
-################################
 
 for package in $(cat "$config_dir/homebrew/packages.txt"); do
         load_package "$package"
 done
-
-##################
-# Clean Homebrew #
-##################
 
 brew cleanup
 brew prune
