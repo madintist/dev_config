@@ -2,7 +2,7 @@
 
 printf "Running Homebrew setup script.\n"
 
-config_dir=~/dev_config
+homebrew_dir=~/dev_config/homebrew
 homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 
 # Install a Homebrew package
@@ -43,7 +43,7 @@ fi
 brew update
 brew upgrade
 
-for package in $(cat "$config_dir/homebrew/packages.txt"); do
+for package in $(cat "$homebrew_dir/packages.txt"); do
         load_package "$package"
 done
 
