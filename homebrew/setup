@@ -3,7 +3,7 @@
 config_dir=~/dev_config
 homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 
-# Install or update a Homebrew package
+# Install a Homebrew package
 # $1 - Name of the installed executable (The package name may be different)
 # $2 - Optional custom install script
 load_package () {
