@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#############
-# Functions #
-#############
-
 # Argument $1: The name of the Homebrew package
 # Argument $2: Optional custom code to run instead of Homebrew install
 check_dependency () {
@@ -20,20 +16,8 @@ check_dependency () {
         fi
 }
 
-############
-# Homebrew #
-############
-
 # Run Homebrew setup
 ./homebrew/setup
-
-check_dependency "ag" "brew update && brew install the_silver_searcher"
-check_dependency "cmake"
-check_dependency "git"
-check_dependency "nvim"
-check_dependency "python"
-check_dependency "node"
-check_dependency "npm"
 
 ########################
 # Neovim Configuration #
