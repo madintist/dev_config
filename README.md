@@ -16,6 +16,14 @@ Run `./setup` to symlink the config files into their proper places.
 - `./Neovim/plugins`
   - This will install and / or update all the Neovim plugins.
 
+## Configuration
+
+Here's a guide to the configuration / changing things:
+
+### Homebrew
+
+Homebrew packages that we want to have installed are listed in `./homebrew/packages.txt`. Add the name of the Homebrew package as a new line in the text file and run the Homebrew setup script to install it.
+
 ## TODO
 
 List of things that I need to add.

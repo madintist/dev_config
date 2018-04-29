@@ -3,6 +3,7 @@ git
 git-flow
 git-lfs
 go
+hub
 io
 multimarkdown
 neovim
