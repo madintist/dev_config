@@ -61,12 +61,12 @@ set hlsearch  " Highlight search results
 " }}}
 
 " UI {{{
-set cursorline " Highlight the current line
-set lazyredraw " Don't redraw the screen unless we have to
-set number     " Show line numbers
-set showcmd    " Show the last command that we ran
-set showmatch  " Highlight matching braces and stuff
-set wildmenu   " Use the wildmenu autocomplete with :e
+set cursorline     " Highlight the current line
+set lazyredraw     " Don't redraw the screen unless we have to
+set relativenumber " Show line numbers
+set showcmd        " Show the last command that we ran
+set showmatch      " Highlight matching braces and stuff
+set wildmenu       " Use the wildmenu autocomplete with :e
 " }}}
 
 " }}}
