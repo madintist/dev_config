@@ -1,20 +1,5 @@
 #!/bin/bash
 
-#################
-# Prerequisites #
-#################
-
-# Check if Git is installed
-command -v git >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-  printf "Git must be installed to run this script. Aborting.\n"
-  exit 1
-fi
-
-#############
-# Functions #
-#############
-
 # Directory where Neovim plugins are written
 nvim_plugins=~/.config/nvim/bundle
 
@@ -35,8 +20,10 @@ clean_plugins () {
   done
 }
 
-# This will load a plugin from Github
+# This will load a plugin from GitHub
 # Use like this: load_plugin "mileszs/ack.vim"
+# $1 - The plugin to load from GitHub in username/repo format
+# $2 - An optional installation script to run after cloning from GitHub.
 load_plugin () {
   account=$( echo $1 | cut -d'/' -f1 )
   plugin=$( echo $1 | cut -d'/' -f2 )
@@ -64,11 +51,14 @@ load_plugin () {
   plugin_list+=("$plugin")
 }
 
-#######################
-# Load Neovim plugins #
-#######################
+# Check if Git is installed
+command -v git >/dev/null 2>&1
+if [ ! $? -eq 0 ]; then
+  printf "Git must be installed to run this script. Aborting.\n"
+  exit 1
+fi
 
-printf "Loading Neovim plugins:\n"
+printf "Loading Neovim plugins:\n\n"
 
 load_plugin "mileszs/ack.vim"
 load_plugin "w0rp/ale"
@@ -89,3 +79,5 @@ load_plugin "simnalamburt/vim-mundo"
 load_plugin "posva/vim-vue"
 
 clean_plugins
+
+printf "Finished loading Neovim plugins.\n\n"
