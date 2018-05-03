@@ -9,42 +9,42 @@ homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 # $1 - Name of the installed executable (The package name may be different)
 # $2 - Optional custom install script
 load_package () {
-        # Get a list of Homebrew packages if we don't have it yet.
-        if [[ ! $homebrew_packages ]]; then
-                homebrew_packages=$(brew list)
-        fi
+  # Get a list of Homebrew packages if we don't have it yet.
+  if [[ ! $homebrew_packages ]]; then
+    homebrew_packages=$(brew list)
+  fi
 
-        if [[ ! "$homebrew_packages" =~ "$1" ]]; then
-                if [[ -z "$2" ]]; then
-                        printf "Installing %s\n" $1
-                        brew install "$1"
-                else
-                        printf "Executing a custom install script:\n"
-                        eval $2
-                fi
-        fi
+  if [[ ! "$homebrew_packages" =~ "$1" ]]; then
+    if [[ -z "$2" ]]; then
+      printf "Installing %s\n" $1
+      brew install "$1"
+    else
+      printf "Executing a custom install script:\n"
+      eval $2
+    fi
+  fi
 }
 
 # Is Homebrew installed already?
 command -v brew >/dev/null 2>&1
 if [[ ! $? -eq 0 ]]; then
-        # If not we need to set it up.
+  # If not we need to set it up.
 
-        # Delete old ~/homebrew if it's already there.
-        if [[ -d ~/homebrew ]]; then
-                rm -rf ~/homebrew
-        fi
+  # Delete old ~/homebrew if it's already there.
+  if [[ -d ~/homebrew ]]; then
+    rm -rf ~/homebrew
+  fi
 
-        # Install Homebrew to ~/homebrew
-        cd ~
-        mkdir ~/homebrew && curl -L $homebrew_url | tar xz --strip 1 -C homebrew
+  # Install Homebrew to ~/homebrew
+  cd ~
+  mkdir ~/homebrew && curl -L $homebrew_url | tar xz --strip 1 -C homebrew
 fi
 
 brew update
 brew upgrade
 
 for package in $(cat "$homebrew_dir/packages.txt"); do
-        load_package "$package"
+  load_package "$package"
 done
 
 brew cleanup
