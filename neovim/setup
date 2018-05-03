@@ -3,6 +3,9 @@
 # This is the system directory where Neovim keeps it's configuration.
 nvim_directory=~/.config/nvim
 
+# This is the URL we load Pathogen from
+pathogen_url="https://tpo.pe/pathogen.vim"
+
 # Make sure that the directory exists
 if [[ ! -d $nvim_directory ]]; then
   mkdir -p $nvim_directory
@@ -27,7 +30,7 @@ if [[ ! -d $nvim_directory/bundle ]]; then
 fi
 
 if [[ ! -f $nvim_directory/autoload/pathogen.vim ]]; then
-  curl -LSso $nvim_directory/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  curl -LSso $nvim_directory/autoload/pathogen.vim "$pathogen_url"
 fi
 
 # Install Pathogen Plugins
