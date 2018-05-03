@@ -50,9 +50,11 @@ set scrolloff=10          " Show 10 lines of context around cursor when scrollin
 " }}}
 
 " Indentation {{{
-set tabstop=2      " Indent 2 spaces
-set softtabstop=2  " Tab will indent by 2 spaces
 set expandtab      " Force spaces instead of tabs
+set shiftwidth=2   " Indent 2 spaces
+set smarttab       " Automatically go to the correct indent
+set softtabstop=0  " Turn off tab indentation completely
+set tabstop=2      " Indent 2 spaces
 " }}}
 
 " Searching {{{
