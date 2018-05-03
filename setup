@@ -36,7 +36,7 @@ if [ -f $nvim_directory/init.vim ] || [ -h $nvim_directory/init.vim ]; then
 fi
 
 # Symlink the config file
-ln -s $PWD/Neovim/init.vim $nvim_directory/init.vim
+ln -s $PWD/neovim/init.vim $nvim_directory/init.vim
 
 # Install Pathogen
 ## First check if the directories for it exist
@@ -53,7 +53,7 @@ if [ ! -f $nvim_directory/autoload/pathogen.vim ]; then
 fi
 
 # Install Pathogen Plugins
-./Neovim/plugins
+./neovim/plugins
 
 #########################
 # Node.js Configuration #
