@@ -10,6 +10,8 @@ Run `./setup` to symlink the config files into their proper places.
 
 - `./setup`
   - Runs all config scripts, adds system symlinks, etc.
+- `./homebrew/plugins`
+  - This will update Homebrew and install any packages that haven't been installed yet.`
 - `./homebrew/setup`
   - This will install, update, and clean Homebrew.
   - It will install any packages listed in `./homebrew/packages.txt`

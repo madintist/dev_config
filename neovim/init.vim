@@ -9,12 +9,12 @@ execute pathogen#infect()
 
 " Toggle normal / relative line numbers
 function! ToggleRelativeNumbers() " {{{
-        if(&relativenumber == 1)
-                set norelativenumber
-                set number
-        else
-                set relativenumber
-        endif
+  if(&relativenumber == 1)
+    set norelativenumber
+    set number
+  else
+    set relativenumber
+  endif
 endfunc " }}}
 
 " }}}
@@ -115,8 +115,8 @@ set updatetime=100 " Update GitGutter signs more often
 
 " JavaScript {{{
 augroup javascript_folding        " Turn on code folding
-        au!
-        au FileType javascript setlocal foldmethod=syntax
+  au!
+  au FileType javascript setlocal foldmethod=syntax
 augroup END
 let g:javascript_plugin_jsdoc = 1 " Turn on JSDoc syntax highlighting
 " }}}
@@ -129,9 +129,9 @@ let g:used_javascript_libs = 'jquery,underscore,chai,handlebars,vue' " Turn on t
 set hidden
 
 let g:LanguageClient_serverCommands = {
-                        \ 'javascript': ['javascript-typescript-stdio'],
-                        \ 'javascript.jsx': ['javascript-typescript-stdio'],
-                        \}
+      \ 'javascript': ['javascript-typescript-stdio'],
+      \ 'javascript.jsx': ['javascript-typescript-stdio'],
+      \}
 " }}}
 
 " }}}
