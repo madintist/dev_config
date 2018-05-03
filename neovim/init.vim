@@ -113,6 +113,14 @@ let g:deoplete#sources.javascript = ['LanguageClient'] " Use LangageClient for J
 set updatetime=100 " Update GitGutter signs more often
 " }}}
 
+" JavaScript {{{
+augroup javascript_folding        " Turn on code folding
+        au!
+        au FileType javascript setlocal foldmethod=syntax
+augroup END
+let g:javascript_plugin_jsdoc = 1 " Turn on JSDoc syntax highlighting
+" }}}
+
 " LanguageClient {{{
 set hidden
 
