@@ -10,7 +10,7 @@ check_dependency () {
                         brew update
                         brew install $1
                 else
-                        echo "Executing custom commands:\n"
+                        printf "Executing custom commands:\n"
                         eval $2
                 fi
         fi
