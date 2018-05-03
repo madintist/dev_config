@@ -19,10 +19,6 @@ check_dependency () {
 # Run Homebrew setup
 ./homebrew/setup
 
-########################
-# Neovim Configuration #
-########################
-
 nvim_directory=~/.config/nvim
 
 # Make sure that the directory exists
@@ -55,12 +51,7 @@ fi
 # Install Pathogen Plugins
 ./neovim/plugins
 
-#########################
-# Node.js Configuration #
-#########################
-
 # TODO: Do this the right way.
-
 # Install prettier-standard (since we use this for work)
 check_dependency "prettier-standard" "npm i prettier-standard -g"
 check_dependency "language-server" "npm i javascript-typescript-langserver -g"
