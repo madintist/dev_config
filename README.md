@@ -13,7 +13,7 @@ Run `./setup` to symlink the config files into their proper places.
 - `./homebrew/setup`
   - This will install, update, and clean Homebrew.
   - It will install any packages listed in `./homebrew/packages.txt`
-- `./Neovim/plugins`
+- `./neovim/plugins`
   - This will install and / or update all the Neovim plugins.
 
 ## Configuration
