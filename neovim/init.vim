@@ -121,6 +121,10 @@ augroup END
 let g:javascript_plugin_jsdoc = 1 " Turn on JSDoc syntax highlighting
 " }}}
 
+" JavaScript Libraries Syntax {{{
+let g:used_javascript_libs = 'jquery,underscore,chai,handlebars,vue' " Turn on the libraries that we use
+" }}}
+
 " LanguageClient {{{
 set hidden
 
