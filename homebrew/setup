@@ -1,29 +1,9 @@
 #!/bin/bash
 
-printf "Running Homebrew setup script.\n"
+printf "Running Homebrew setup script.\n\n"
 
-homebrew_dir=~/dev_config/homebrew
+# The URL of the Homebrew installer script
 homebrew_url="https://github.com/Homebrew/brew/tarball/master"
-
-# Install a Homebrew package
-# $1 - Name of the installed executable (The package name may be different)
-# $2 - Optional custom install script
-load_package () {
-  # Get a list of Homebrew packages if we don't have it yet.
-  if [[ ! $homebrew_packages ]]; then
-    homebrew_packages=$(brew list)
-  fi
-
-  if [[ ! "$homebrew_packages" =~ "$1" ]]; then
-    if [[ -z "$2" ]]; then
-      printf "Installing %s\n" $1
-      brew install "$1"
-    else
-      printf "Executing a custom install script:\n"
-      eval $2
-    fi
-  fi
-}
 
 # Is Homebrew installed already?
 command -v brew >/dev/null 2>&1
@@ -40,14 +20,7 @@ if [[ ! $? -eq 0 ]]; then
   mkdir ~/homebrew && curl -L $homebrew_url | tar xz --strip 1 -C homebrew
 fi
 
-brew update
-brew upgrade
+# Install Homebrew plugins (a.k.a packages)
+./homebrew/plugins
 
-for package in $(cat "$homebrew_dir/packages.txt"); do
-  load_package "$package"
-done
-
-brew cleanup
-brew prune
-
-printf "Finished with Homebrew setup script.\n"
+printf "Finished with Homebrew setup script.\n\n"
