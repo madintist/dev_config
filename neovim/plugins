@@ -3,6 +3,9 @@
 # Directory where Neovim plugins are written
 nvim_plugins=~/.config/nvim/bundle
 
+# This file has a list of the plugins that we want installed
+plugin_file=~/dev_config/neovim/packages.txt
+
 # An array of the plugins that are supposed to be installed
 plugin_list=()
 
@@ -27,6 +30,7 @@ clean_plugins () {
 load_plugin () {
   account=$( echo $1 | cut -d'/' -f1 )
   plugin=$( echo $1 | cut -d'/' -f2 )
+  script=$( echo $@ | awk '{split($0, a, "--"); print a[2]}' )
 
   # If the plugin hasn't been loaded load it
   if [ ! -d $nvim_plugins/$plugin ]; then
@@ -43,7 +47,7 @@ load_plugin () {
   # Execute additional commands
   if [ ! -z "$2" ]; then
     printf "Executing custom commands\n"
-    eval "$2"
+    eval "$script"
     printf "\n"
   fi
 
@@ -60,24 +64,10 @@ fi
 
 printf "Loading Neovim plugins:\n\n"
 
-load_plugin "mileszs/ack.vim"
-load_plugin "w0rp/ale"
-load_plugin "ctrlpvim/ctrlp.vim"
-load_plugin "Shougo/deoplete.nvim" "pip3 install neovim"
-load_plugin "mattn/emmet-vim"
-load_plugin "othree/javascript-libraries-syntax.vim"
-load_plugin "autozimu/LanguageClient-neovim" "cd $nvim_plugins/LanguageClient-neovim && bash install.sh"
-load_plugin "stanangeloff/php.vim"
-load_plugin "cakebaker/scss-syntax.vim"
-load_plugin "townk/vim-autoclose"
-load_plugin "altercation/vim-colors-solarized"
-load_plugin "hail2u/vim-css3-syntax"
-load_plugin "airblade/vim-gitgutter"
-load_plugin "pangloss/vim-javascript"
-load_plugin "plasticboy/vim-markdown"
-load_plugin "simnalamburt/vim-mundo"
-load_plugin "posva/vim-vue"
+while IFS= read plugin; do
+  load_plugin $plugin
+done < $plugin_file
 
-clean_plugins
+# clean_plugins
 
 printf "Finished loading Neovim plugins.\n\n"
