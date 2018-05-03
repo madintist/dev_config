@@ -81,5 +81,6 @@ load_plugin "altercation/vim-colors-solarized"
 load_plugin "airblade/vim-gitgutter"
 load_plugin "pangloss/vim-javascript"
 load_plugin "simnalamburt/vim-mundo"
+load_plugin "posva/vim-vue"
 
 clean_plugins
