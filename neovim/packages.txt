@@ -1,0 +1,17 @@
+mileszs/ack.vim
+w0rp/ale
+ctrlpvim/ctrlp.vim
+Shougo/deoplete.nvim "pip3 install neovim"
+mattn/emmet-vim
+othree/javascript-libraries-syntax.vim
+autozimu/LanguageClient-neovim "cd $nvim_plugins/LanguageClient-neovim && bash install.sh"
+stanangeloff/php.vim
+cakebaker/scss-syntax.vim
+townk/vim-autoclose
+altercation/vim-colors-solarized
+hail2u/vim-css3-syntax
+airblade/vim-gitgutter
+pangloss/vim-javascript
+plasticboy/vim-markdown
+simnalamburt/vim-mundo
+posva/vim-vue
