@@ -5,6 +5,20 @@ packages=~/dev_config/neovim/packages.txt # List of Neovim packages to install.
 package_list=()                           # Array of the packages that are supposed to be installed.
 
 
+# Delete any packages that are not in ./neovim/packages.txt
+clean_packages () {
+  # For each package that's currently installed
+  for package in $(ls "$nvim_packages"); do
+    # Check if it's supposed to be installed
+    if [[ ! "${package_list[@]}" =~ "$package" ]]; then
+      # If it's not in the list delete it
+      printf "Deleting package %s\n" "$package"
+      rm -rf "$nvim_packages"/"$package"
+      printf "\n"
+    fi
+  done
+}
+
 # Load the list of packages into an array
 get_package_list () {
   while IFS= read -r package; do
@@ -55,4 +69,5 @@ fi
 printf "Loading Neovim plugins:\n\n"
 get_package_list
 load_packages
+clean_packages
 printf "Finished loading Neovim plugins.\n\n"
