@@ -8,15 +8,10 @@ Run `./setup` to symlink the config files into their proper places.
 
 ## Scripts
 
+These are the root scripts in this repo:
+
 - `./setup`
   - Runs all config scripts, adds system symlinks, etc.
-- `./homebrew/plugins`
-  - This will update Homebrew and install any packages that haven't been installed yet.`
-- `./homebrew/setup`
-  - This will install, update, and clean Homebrew.
-  - It will install any packages listed in `./homebrew/packages.txt`
-- `./neovim/plugins`
-  - This will install and / or update all the Neovim plugins.
 
 ## Configuration
 
@@ -24,12 +19,26 @@ Here's a guide to the configuration / changing things:
 
 ### Homebrew
 
-Homebrew packages that we want to have installed are listed in `./homebrew/packages.txt`. Add the name of the Homebrew package as a new line in the text file and run the Homebrew setup script to install it.
+#### Files
 
-## TODO
+- `./homebrew/packages.txt`
+  - This file contains a list of all the Homebrew packages that we want to have installed.
+  - To add a new package to Homebrew add the name of the package as a new line to this file. Then run the Homebrew setup script to install it.
 
-List of things that I need to add.
+#### Scripts
 
-- [ ] Git
-- [ ] PHP / Composer
-- [ ] Zsh / Oh-My-Zsh
+- `./homebrew/plugins`
+  - This will update Homebrew and install any packages that haven't been installed yet.
+- `./homebrew/setup`
+  - This will install, update, and clean Homebrew.
+  - It will install any packages listed in `./homebrew/packages.txt`
+
+### Neovim
+
+#### Scripts
+
+- `./neovim/plugins`
+  - This will install and / or update all the Neovim plugins.
+- `./neovim/setup`
+  - This will do the initial setup for Neovim.
+  - It will also run the `./neovim/plugins` script.

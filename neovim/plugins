@@ -1,92 +1,73 @@
 #!/bin/bash
 
-#################
-# Prerequisites #
-#################
+nvim_packages=~/.config/nvim/bundle       # Neovim packages are installed here.
+packages=~/dev_config/neovim/packages.txt # List of Neovim packages to install.
+package_list=()                           # Array of the packages that are supposed to be installed.
 
-# Check if Git is installed
-command -v git >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-  printf "Git must be installed to run this script. Aborting.\n"
-  exit 1
-fi
 
-#############
-# Functions #
-#############
-
-# Directory where Neovim plugins are written
-nvim_plugins=~/.config/nvim/bundle
-
-# An array of the plugins that are supposed to be installed
-plugin_list=()
-
-# This will delete any plugins that aren't supposed to be installed anymore
-clean_plugins () {
-  # For each plugin that's currently installed
-  for plugin in $(ls $nvim_plugins); do
-    # Check if it SHOULD be installed
-    if [[ ! "${plugin_list[@]}" =~ "$plugin" ]]; then
-      # If not delete it
-      printf "Deleting %s\n" $plugin
-      rm -rf $nvim_plugins/$plugin
+# Delete any packages that are not in ./neovim/packages.txt
+clean_packages () {
+  # For each package that's currently installed
+  for package in $(ls "$nvim_packages"); do
+    # Check if it's supposed to be installed
+    if [[ ! "${package_list[@]}" =~ "$package" ]]; then
+      # If it's not in the list delete it
+      printf "Deleting package %s\n" "$package"
+      rm -rf "$nvim_packages"/"$package"
       printf "\n"
     fi
   done
 }
 
-# This will load a plugin from Github
-# Use like this: load_plugin "mileszs/ack.vim"
-load_plugin () {
-  account=$( echo $1 | cut -d'/' -f1 )
-  plugin=$( echo $1 | cut -d'/' -f2 )
-
-  # If the plugin hasn't been loaded load it
-  if [ ! -d $nvim_plugins/$plugin ]; then
-    printf "Loading %s\n" $1
-    git clone git://github.com/$account/$plugin $nvim_plugins/$plugin
-    printf "\n"
-  else
-    printf "Updating %s\n" $1
-    cd $nvim_plugins/$plugin
-    git pull
-    printf "\n"
-  fi
-
-  # Execute additional commands
-  if [ ! -z "$2" ]; then
-    printf "Executing custom commands\n"
-    eval "$2"
-    printf "\n"
-  fi
-
-  # Append to the plugin list array
-  plugin_list+=("$plugin")
+# Load the list of packages into an array
+get_package_list () {
+  while IFS= read -r package; do
+    package_list+=("$package")
+  done < "$packages"
 }
 
-#######################
-# Load Neovim plugins #
-#######################
+# Install/update packages from $package_list
+load_packages () {
+  for package in "${package_list[@]}"; do
+    package_full_name=$( echo "$package" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[1]); gsub(/[ \t]+$/, "", a[1]); print a[1]}' )
+    package_name=$( echo "$package_full_name" | cut -d'/' -f2 )
+    package_script=$( echo "$package" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[2]); gsub(/[ \t]+$/, "", a[2]); print a[2]}' )
 
-printf "Loading Neovim plugins:\n"
+    # If the package isn't installed
+    if [[ ! -d "$nvim_packages"/"$package_name" ]]; then
+      # Install it
+      printf "Loading package %s\n" "$package_name"
+      git clone git://github.com/"$package_full_name" "$nvim_packages"/"$package_name"
+      printf "\n"
+    else
+      # Otherwise make sure it's up to date
+      printf "Updating package %s\n" $package_name
+      cd "$nvim_packages"/"$package_name"
+      git pull
+      printf "\n"
+    fi
 
-load_plugin "mileszs/ack.vim"
-load_plugin "w0rp/ale"
-load_plugin "ctrlpvim/ctrlp.vim"
-load_plugin "Shougo/deoplete.nvim" "pip3 install neovim"
-load_plugin "mattn/emmet-vim"
-load_plugin "yggdroot/indentline"
-load_plugin "othree/javascript-libraries-syntax.vim"
-load_plugin "autozimu/LanguageClient-neovim" "cd $nvim_plugins/LanguageClient-neovim && bash install.sh"
-load_plugin "stanangeloff/php.vim"
-load_plugin "cakebaker/scss-syntax.vim"
-load_plugin "townk/vim-autoclose"
-load_plugin "altercation/vim-colors-solarized"
-load_plugin "hail2u/vim-css3-syntax"
-load_plugin "airblade/vim-gitgutter"
-load_plugin "pangloss/vim-javascript"
-load_plugin "plasticboy/vim-markdown"
-load_plugin "simnalamburt/vim-mundo"
-load_plugin "posva/vim-vue"
+    # If there's a post-install script
+    if [[ ! -z "$package_script" ]]; then
+      # Execute it
+      printf "Executing post-install script:\n"
+      eval "$package_script"
+      printf "\n"
+    fi
+  done
+}
 
-clean_plugins
+
+# Make sure that Git is available
+command -v git >/dev/null 2>&1
+if [[ ! $? -eq 0 ]]; then
+  printf "Git must be installed to run this script. Aborting.\n"
+  exit 1
+fi
+
+
+printf "Loading Neovim plugins:\n\n"
+get_package_list
+load_packages
+clean_packages
+printf "Finished loading Neovim plugins.\n\n"
