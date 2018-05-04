@@ -3,6 +3,7 @@ w0rp/ale
 ctrlpvim/ctrlp.vim
 Shougo/deoplete.nvim -- pip3 install neovim
 mattn/emmet-vim
+yggdroot/indentline
 othree/javascript-libraries-syntax.vim
 autozimu/LanguageClient-neovim -- cd $nvim_plugins/LanguageClient-neovim && bash install.sh
 stanangeloff/php.vim

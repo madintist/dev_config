@@ -44,6 +44,5 @@ fi
 
 
 printf "Loading Neovim plugins:\n\n"
-
 get_package_list
 load_packages
