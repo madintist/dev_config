@@ -1,21 +1,36 @@
 #!/bin/bash
 
-nvim_plugins=~/.config/nvim/bundle        # Neovim plugins are installed here.
-packages=~/dev_config/neovim/packages.txt # List of Neovim plugins to install.
-package_list=()                           # Array of the plugins that are supposed to be installed.
+nvim_packages=~/.config/nvim/bundle       # Neovim packages are installed here.
+packages=~/dev_config/neovim/packages.txt # List of Neovim packages to install.
+package_list=()                           # Array of the packages that are supposed to be installed.
 
 
 # Load the list of packages into an array
 get_package_list () {
   while IFS= read package; do
     package_list+=("$package")
-  done < $packages
+  done < "$packages"
 }
 
 # Install/update packages from $package_list
 load_packages () {
   for package in "${package_list[@]}"; do
-    echo $package
+    package_full_name=$( echo "$package" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[1]); gsub(/[ \t]+$/, "", a[1]); print a[1]}' )
+    package_name=$( echo "$package_full_name" | cut -d'/' -f2 )
+    package_script=$( echo "$package" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[2]); gsub(/[ \t]+$/, "", a[2]); print a[2]}' )
+
+    if [[ ! -d "$nvim_packages"/"$package_name" ]]; then
+      printf "Loading package %s\n" "$package_name"
+      git clone git://github.com/"$package_full_name" "$nvim_packages"/"$package_name"
+      printf "\n"
+    else
+      printf "Updating package %s\n" $package_name
+      cd "$nvim_packages"/"$package_name"
+      git pull
+      printf "\n"
+    fi
+
+    # TODO: Run post-install scripts
   done
 }
 
