@@ -71,6 +71,6 @@ while IFS= read plugin; do
   load_plugin $plugin
 done < $packages
 
-# clean_plugins
+clean_plugins
 
 printf "Finished loading Neovim plugins.\n\n"
