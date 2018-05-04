@@ -7,7 +7,7 @@ package_list=()                           # Array of the packages that are suppo
 
 # Load the list of packages into an array
 get_package_list () {
-  while IFS= read package; do
+  while IFS= read -r package; do
     package_list+=("$package")
   done < "$packages"
 }
