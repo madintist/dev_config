@@ -24,12 +24,15 @@ clean_plugins () {
 }
 
 # This will load a plugin from GitHub
-# Use like this: load_plugin "mileszs/ack.vim"
-# $1 - The plugin to load from GitHub in username/repo format
-# $2 - An optional installation script to run after cloning from GitHub.
+# Use like this: load_plugin "username/repo -- [post install script]"
 load_plugin () {
+  # The GitHub account for the plugin
   account=$( echo $1 | cut -d'/' -f1 )
+
+  # The GitHub repo name for the plugin
   plugin=$( echo $1 | cut -d'/' -f2 )
+
+  # An optional post-installation script
   script=$( echo $@ | awk '{split($0, a, "--"); print a[2]}' )
 
   # If the plugin hasn't been loaded load it
@@ -45,8 +48,8 @@ load_plugin () {
   fi
 
   # Execute additional commands
-  if [ ! -z "$2" ]; then
-    printf "Executing custom commands\n"
+  if [ ! -z "$script" ]; then
+    printf "Executing post-install script:\n"
     eval "$script"
     printf "\n"
   fi
