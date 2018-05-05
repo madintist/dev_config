@@ -1,7 +1,7 @@
 #!/bin/bash
 
 nvim_packages=~/.config/nvim/bundle       # Neovim packages are installed here.
-packages=~/dev_config/neovim/packages.txt # List of Neovim packages to install.
+packages=~/dev_config/neovim/plugins.txt # List of Neovim packages to install.
 package_list=()                           # Array of the packages that are supposed to be installed.
 
 
