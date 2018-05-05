@@ -2,15 +2,14 @@
 
 printf "Running Homebrew plugin script.\n\n"
 
-# This file has a list of the plugins to install.
-homebrew_plugins_file=~/dev_config/homebrew/plugins.txt
+homebrew_plugins_file=~/dev_config/homebrew/plugins.txt # This file has a list of the plugins to install.
 
 # Install a Homebrew package
 # $1 - Name of the installed executable (The package name may be different)
 # $2 - Optional custom install script
 load_package () {
   # Get a list of Homebrew plugins if we don't have it yet.
-  if [[ ! $homebrew_plugins ]]; then
+  if [[ ! "$homebrew_plugins" ]]; then
     homebrew_plugins=$(brew list)
   fi
 

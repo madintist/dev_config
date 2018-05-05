@@ -13,7 +13,7 @@ clean_packages () {
     if [[ ! "${package_list[@]}" =~ "$package" ]]; then
       # If it's not in the list delete it
       printf "Deleting package %s\n" "$package"
-      rm -rf "$nvim_packages"/"$package"
+      rm -rf "$nvim_packages/$package"
       printf "\n"
     fi
   done
@@ -34,15 +34,15 @@ load_packages () {
     package_script=$( echo "$package" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[2]); gsub(/[ \t]+$/, "", a[2]); print a[2]}' )
 
     # If the package isn't installed
-    if [[ ! -d "$nvim_packages"/"$package_name" ]]; then
+    if [[ ! -d "$nvim_packages/$package_name" ]]; then
       # Install it
       printf "Loading package %s\n" "$package_name"
-      git clone git://github.com/"$package_full_name" "$nvim_packages"/"$package_name"
+      git clone "git://github.com/$package_full_name" "$nvim_packages/$package_name"
       printf "\n"
     else
       # Otherwise make sure it's up to date
       printf "Updating package %s\n" $package_name
-      cd "$nvim_packages"/"$package_name"
+      cd "$nvim_packages/$package_name"
       git pull
       printf "\n"
     fi
