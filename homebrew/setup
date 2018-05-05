@@ -16,7 +16,7 @@ if [[ ! $? -eq 0 ]]; then
   fi
 
   # Install Homebrew to $homebrew_directory
-  mkdir "$homebrew_directory" && curl -L "$homebrew_url" | tar xz --strip 1 -C homebrew
+  mkdir "$homebrew_directory" && curl -L "$homebrew_url" | tar xz --strip 1 -C "$homebrew_directory"
 fi
 
 # Install Homebrew plugins (a.k.a packages)
