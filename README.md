@@ -35,6 +35,13 @@ Here's a guide to the configuration / changing things:
 
 ### Neovim
 
+#### Files
+
+- `./neovim/plugins.txt`
+  - This is a list of plugins to install in Neovim.
+  - Each plugin is on it's own line in the following format:
+    - `[username]/[repository] -- [optional post-install script]`
+
 #### Scripts
 
 - `./neovim/plugins`
