@@ -9,30 +9,30 @@ nvim_directory=~/.config/nvim
 pathogen_url="https://tpo.pe/pathogen.vim"
 
 # Make sure that the directory exists
-if [[ ! -d $nvim_directory ]]; then
-  mkdir -p $nvim_directory
+if [[ ! -d "$nvim_directory" ]]; then
+  mkdir -p "$nvim_directory"
 fi
 
 # Check for files / symlinks that are already there
-if [[ -f $nvim_directory/init.vim ]] || [[ -h $nvim_directory/init.vim ]]; then
-  rm -f $nvim_directory/init.vim
+if [[ -f "$nvim_directory/init.vim" ]] || [[ -h "$nvim_directory/init.vim" ]]; then
+  rm -f "$nvim_directory/init.vim"
 fi
 
 # Symlink the config file
-ln -s $PWD/neovim/init.vim $nvim_directory/init.vim
+ln -s "$PWD/neovim/init.vim" "$nvim_directory/init.vim"
 
 # Install Pathogen
 ## First check if the directories for it exist
-if [[ ! -d $nvim_directory/autoload ]]; then
-  mkdir -p $nvim_directory/autoload
+if [[ ! -d "$nvim_directory/autoload" ]]; then
+  mkdir -p "$nvim_directory/autoload"
 fi
 
-if [[ ! -d $nvim_directory/bundle ]]; then
-  mkdir -p $nvim_directory/bundle
+if [[ ! -d "$nvim_directory/bundle" ]]; then
+  mkdir -p "$nvim_directory/bundle"
 fi
 
-if [[ ! -f $nvim_directory/autoload/pathogen.vim ]]; then
-  curl -LSso $nvim_directory/autoload/pathogen.vim "$pathogen_url"
+if [[ ! -f "$nvim_directory/autoload/pathogen.vim" ]]; then
+  curl -LSso "$nvim_directory/autoload/pathogen.vim" "$pathogen_url"
 fi
 
 # Install Pathogen Plugins

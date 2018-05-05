@@ -21,19 +21,26 @@ Here's a guide to the configuration / changing things:
 
 #### Files
 
-- `./homebrew/packages.txt`
-  - This file contains a list of all the Homebrew packages that we want to have installed.
+- `./homebrew/plugins.txt`
+  - This file contains a list of all the Homebrew plugins that we want to have installed.
   - To add a new package to Homebrew add the name of the package as a new line to this file. Then run the Homebrew setup script to install it.
 
 #### Scripts
 
 - `./homebrew/plugins`
-  - This will update Homebrew and install any packages that haven't been installed yet.
+  - This will update Homebrew and install any plugins that haven't been installed yet.
 - `./homebrew/setup`
   - This will install, update, and clean Homebrew.
-  - It will install any packages listed in `./homebrew/packages.txt`
+  - It will install any plugins listed in `./homebrew/plugins.txt`
 
 ### Neovim
+
+#### Files
+
+- `./neovim/plugins.txt`
+  - This is a list of plugins to install in Neovim.
+  - Each plugin is on it's own line in the following format:
+    - `[username]/[repository] -- [optional post-install script]`
 
 #### Scripts
 

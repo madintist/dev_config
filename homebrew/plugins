@@ -2,19 +2,18 @@
 
 printf "Running Homebrew plugin script.\n\n"
 
-# The directory where our Homebrew configuration lives
-homebrew_dir=~/dev_config/homebrew
+homebrew_plugins_file=~/dev_config/homebrew/plugins.txt # This file has a list of the plugins to install.
 
 # Install a Homebrew package
 # $1 - Name of the installed executable (The package name may be different)
 # $2 - Optional custom install script
 load_package () {
-  # Get a list of Homebrew packages if we don't have it yet.
-  if [[ ! $homebrew_packages ]]; then
-    homebrew_packages=$(brew list)
+  # Get a list of Homebrew plugins if we don't have it yet.
+  if [[ ! "$homebrew_plugins" ]]; then
+    homebrew_plugins=$(brew list)
   fi
 
-  if [[ ! "$homebrew_packages" =~ "$1" ]]; then
+  if [[ ! "$homebrew_plugins" =~ "$1" ]]; then
     if [[ -z "$2" ]]; then
       printf "Installing %s\n" $1
       brew install "$1"
@@ -30,7 +29,7 @@ load_package () {
 brew update
 brew upgrade
 
-for package in $(cat "$homebrew_dir/packages.txt"); do
+for package in $(cat "$homebrew_plugins_file"); do
   load_package "$package"
 done
 
