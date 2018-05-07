@@ -12,6 +12,7 @@ openssl
 python
 python@2
 ruby
+rust
 sqlite
 the_silver_searcher
 tldr
