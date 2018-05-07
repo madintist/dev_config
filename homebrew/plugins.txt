@@ -3,6 +3,7 @@ git
 git-flow
 git-lfs
 go
+gpg
 hub
 io
 multimarkdown
