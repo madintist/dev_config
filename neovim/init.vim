@@ -125,6 +125,10 @@ let g:javascript_plugin_jsdoc = 1 " Turn on JSDoc syntax highlighting
 let g:used_javascript_libs = 'jquery,underscore,chai,handlebars,vue' " Turn on the libraries that we use
 " }}}
 
+" JSON {{{
+let g:vim_json_syntax_conceal = 0 " Don't hide quotes! This is ridiculous that I should have to do this.
+" }}}
+
 " LanguageClient {{{
 set hidden
 
