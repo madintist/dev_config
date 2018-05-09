@@ -17,6 +17,12 @@ These are the root scripts in this repo:
 
 Here's a guide to the configuration / changing things:
 
+### GPG / PGP
+
+**TODO**
+
+I need to add documentation and/or automate this section.
+
 ### Homebrew
 
 #### Files
