@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Software that must be installed for GPG to work.
-gpg_deps=(gnupg gpg-agent pinentry-mac)
+gpg_deps=(gnupg gpg-agent pinentry-mac) # This software must be available for GPG to work.
 
 
 # Check that Homebrew is available
