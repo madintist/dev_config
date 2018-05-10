@@ -58,10 +58,10 @@ I need to add documentation and/or automate this section.
 
 ### Rust
 
-#### Files
+**NOTE:** We can't use a `Cargo.toml` file here, as that only works for Rust projects themselves.
+We'll just use the same `plugins.txt` file that we've been using to list binaries that should be installed with Cargo.
 
-- `./rust/Cargo.toml`
-  - Rust's dependency file. This lists all the packages to install.
+#### Files
 
 #### Scripts
 
