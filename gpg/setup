@@ -1,1 +1,14 @@
 #!/bin/bash
+
+# Software that must be installed for GPG to work.
+gpg_deps=(gnupg gpg-agent pinentry-mac)
+
+
+# Check that Homebrew is available
+command -v brew >/dev/null 2>&1 
+if [[ ! $? -eq 0 ]]; then
+  printf "Command brew not found.\n"
+  printf "Make sure that Homebrew is installed and available on the PATH.\n"
+  printf "Aborting.\n"
+  exit 1
+fi
