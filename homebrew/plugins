@@ -33,6 +33,9 @@ for package in $(cat "$homebrew_plugins_file"); do
   load_package "$package"
 done
 
+# HACK: This needs to be done the right way.
+/usr/local/opt/fzf/install
+
 brew cleanup
 brew prune
 
