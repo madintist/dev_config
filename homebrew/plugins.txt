@@ -1,4 +1,5 @@
 cmake
+fzf -- /usr/local/opt/fzf/install
 git
 git-flow
 git-lfs
