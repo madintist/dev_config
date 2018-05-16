@@ -1,3 +1,4 @@
+bat
 cmake
 fzf -- /usr/local/opt/fzf/install
 git
@@ -16,7 +17,6 @@ pinentry-mac
 python
 python@2
 ruby
-rust
 sqlite
 the_silver_searcher
 tldr
