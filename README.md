@@ -29,7 +29,8 @@ I need to add documentation and/or automate this section.
 
 - `./homebrew/plugins.txt`
   - This file contains a list of all the Homebrew plugins that we want to have installed.
-  - To add a new package to Homebrew add the name of the package as a new line to this file. Then run the Homebrew setup script to install it.
+  - Each plugin is on it's own line in the following format:
+    - `[plugin name] -- [optional post-install script]`
 
 #### Scripts
 
