@@ -2,41 +2,48 @@
 
 printf "Running Homebrew plugin script.\n\n"
 
-homebrew_plugins_file=~/dev_config/homebrew/plugins.txt # This file has a list of the plugins to install.
+plugins_list=() # This is an array of plugins that we need to load.
+plugins_file=~/dev_config/homebrew/plugins.txt # This file has a list of the plugins to install.
 
-# Install a Homebrew package
-# $1 - Name of the installed executable (The package name may be different)
-# $2 - Optional custom install script
-load_package () {
-  # Get a list of Homebrew plugins if we don't have it yet.
-  if [[ ! "$homebrew_plugins" ]]; then
-    homebrew_plugins=$(brew list)
-  fi
-
-  if [[ ! "$homebrew_plugins" =~ "$1" ]]; then
-    if [[ -z "$2" ]]; then
-      printf "Installing %s\n" $1
-      brew install "$1"
-      printf "\n"
-    else
-      printf "Executing a custom install script:\n"
-      eval $2
-      printf "\n"
-    fi
-  fi
+# Load the list of plugins into an array
+get_plugins_list () {
+  while IFS= read -r plugin; do
+    plugins_list+=("$plugin")
+  done < "$plugins_file"
 }
 
+# Install/update plugins from $plugins_list
+load_plugins () {
+  homebrew_plugins=$(brew list)
+
+  for plugin in "${plugins_list[@]}"; do
+    plugin_name=$( echo "$plugin" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[1]); gsub(/[ \t]+$/, "", a[1]); print a[1]}' )
+    plugin_script=$( echo "$plugin" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[2]); gsub(/[ \t]+$/, "", a[2]); print a[2]}' )
+
+    # If the plugin isn't installed yet
+    if [[ ! "$homebrew_plugins" =~ "$plugin_name" ]]; then
+      # Install it
+      printf "Installing %s\n" "$plugin_name"
+      brew install "$plugin_name"
+      printf "\n"
+
+      # If there's a post-install script
+      if [[ ! -z "$plugin_script" ]]; then
+        # Execute it
+        printf "Executing post-install script:\n"
+        eval "$plugin_script"
+        printf "\n"
+      fi
+    fi
+  done
+}
+
+
+printf "Loading Homebrew plugins:\n\n"
 brew update
+get_plugins_list
+load_plugins
 brew upgrade
-
-for package in $(cat "$homebrew_plugins_file"); do
-  load_package "$package"
-done
-
-# HACK: This needs to be done the right way.
-/usr/local/opt/fzf/install
-
 brew cleanup
 brew prune
-
-printf "Finished with Homebrew plugin script.\n\n"
+printf "Finished loading Homebrew plugins.\n\n"
