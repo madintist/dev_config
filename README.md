@@ -68,5 +68,6 @@ We'll just use the same `plugins.txt` file that we've been using to list binarie
 
 - `./rust/setup`
   - Set up the Rust environment.
+  - The Rust compiler will be installed with Homebrew.
 - `./rust/update`
   - Update Rust packages installed with Cargo.
