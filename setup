@@ -3,15 +3,15 @@
 # Argument $1: The name of the Homebrew package
 # Argument $2: Optional custom code to run instead of Homebrew install
 check_dependency () {
-  command -v $1 >/dev/null 2>&1
-  if [ ! $? -eq 0 ]; then
-    if [ -z "$2" ]; then
-      echo "Installing $1"
+  command -v "$1" >/dev/null 2>&1
+  if [[ ! "$?" -eq 0 ]]; then
+    if [[ -z "$2" ]]; then
+      printf "Installing %s\n" "$1"
       brew update
-      brew install $1
+      brew install "$1"
     else
       printf "Executing custom commands:\n"
-      eval $2
+      eval "$2"
     fi
   fi
 }
