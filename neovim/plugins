@@ -63,7 +63,7 @@ load_plugins () {
 
 # Make sure that Git is available
 command -v git >/dev/null 2>&1
-if [[ ! $? -eq 0 ]]; then
+if [[ ! "$?" -eq 0 ]]; then
   printf "Git must be installed to run this script. Aborting.\n"
   exit 1
 fi
