@@ -4,7 +4,7 @@
 nvim_plugins=~/.config/nvim/bundle
 
 # List of Neovim plugins to install.
-plugins=~/dev_config/neovim/plugins.txt
+plugin_file=~/dev_config/neovim/plugins.txt
 
 # Array of the plugins that are supposed to be installed.
 plugin_list=()
@@ -27,7 +27,7 @@ clean_plugins () {
 get_plugin_list () {
   while IFS= read -r plugin; do
     plugin_list+=("$plugin")
-  done < "$plugins"
+  done < "$plugin_file"
 }
 
 # Install/update plugins from $plugin_list
