@@ -1,9 +1,13 @@
 #!/bin/bash
 
-nvim_plugins=~/.config/nvim/bundle       # Neovim plugins are installed here.
-plugins=~/dev_config/neovim/plugins.txt  # List of Neovim plugins to install.
-plugin_list=()                           # Array of the plugins that are supposed to be installed.
+# Neovim plugins are installed here.
+nvim_plugins=~/.config/nvim/bundle
 
+# List of Neovim plugins to install.
+plugins=~/dev_config/neovim/plugins.txt
+
+# Array of the plugins that are supposed to be installed.
+plugin_list=()
 
 # Delete any plugins that are not in ./neovim/plugins.txt
 clean_plugins () {
