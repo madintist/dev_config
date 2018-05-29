@@ -45,7 +45,7 @@ load_plugins () {
       printf "\n"
     else
       # Otherwise make sure it's up to date
-      printf "Updating plugin %s\n" $plugin_name
+      printf "Updating plugin %s\n" "$plugin_name"
       cd "$nvim_plugins/$plugin_name"
       git pull
       printf "\n"
