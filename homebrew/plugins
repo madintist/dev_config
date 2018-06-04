@@ -22,7 +22,7 @@ load_plugins () {
     plugin_script=$( echo "$plugin" | awk '{split($0, a, "--"); gsub(/^[ \t]+/, "", a[2]); gsub(/[ \t]+$/, "", a[2]); print a[2]}' )
 
     # If the plugin isn't installed yet install it
-    if [[ ! "$homebrew_plugins" == "$plugin_name" ]]; then
+    if [[ ! "$homebrew_plugins" =~ "$plugin_name" ]]; then
       printf "Installing %s\n" "$plugin_name"
       brew install "$plugin_name"
       printf "\n"
