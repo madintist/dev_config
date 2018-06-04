@@ -2,12 +2,15 @@
 
 printf "Running Homebrew setup script.\n\n"
 
-homebrew_directory=~/homebrew                                  # The installation directory for Homebrew
-homebrew_url="https://github.com/Homebrew/brew/tarball/master" # The URL of the Homebrew installer script
+# The installation directory for Homebrew
+homebrew_directory=~/homebrew
+
+# The URL of the Homebrew installer script
+homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 
 # Is Homebrew installed already?
 command -v brew >/dev/null 2>&1
-if [[ ! $? -eq 0 ]]; then
+if [[ ! "$?" -eq 0 ]]; then
   # If not we need to set it up.
 
   # Delete old $homebrew_directory if it's already there.

@@ -1,9 +1,13 @@
 #!/bin/bash
 
-nvim_plugins=~/.config/nvim/bundle       # Neovim plugins are installed here.
-plugins=~/dev_config/neovim/plugins.txt  # List of Neovim plugins to install.
-plugin_list=()                           # Array of the plugins that are supposed to be installed.
+# Neovim plugins are installed here.
+nvim_plugins=~/.config/nvim/bundle
 
+# List of Neovim plugins to install.
+plugin_file=~/dev_config/neovim/plugins.txt
+
+# Array of the plugins that are supposed to be installed.
+plugin_list=()
 
 # Delete any plugins that are not in ./neovim/plugins.txt
 clean_plugins () {
@@ -23,7 +27,7 @@ clean_plugins () {
 get_plugin_list () {
   while IFS= read -r plugin; do
     plugin_list+=("$plugin")
-  done < "$plugins"
+  done < "$plugin_file"
 }
 
 # Install/update plugins from $plugin_list
@@ -41,7 +45,7 @@ load_plugins () {
       printf "\n"
     else
       # Otherwise make sure it's up to date
-      printf "Updating plugin %s\n" $plugin_name
+      printf "Updating plugin %s\n" "$plugin_name"
       cd "$nvim_plugins/$plugin_name"
       git pull
       printf "\n"
@@ -57,14 +61,12 @@ load_plugins () {
   done
 }
 
-
 # Make sure that Git is available
 command -v git >/dev/null 2>&1
-if [[ ! $? -eq 0 ]]; then
+if [[ ! "$?" -eq 0 ]]; then
   printf "Git must be installed to run this script. Aborting.\n"
   exit 1
 fi
-
 
 printf "Loading Neovim plugins:\n\n"
 get_plugin_list
