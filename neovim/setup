@@ -38,4 +38,12 @@ fi
 # Install Pathogen Plugins
 ./neovim/plugins
 
+# If Node.js / NPM is available
+# install the neovim NPM package.
+command -v npm >/dev/null 2>&1
+if [[ "$?" -eq 0 && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+  printf "Installing neovim NPM package:\n"
+  npm i neovim -g
+fi
+
 printf "Finished with the Neovim setup script.\n\n"
