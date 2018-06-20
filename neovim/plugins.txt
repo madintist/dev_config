@@ -11,6 +11,10 @@ cakebaker/scss-syntax.vim
 townk/vim-autoclose
 altercation/vim-colors-solarized
 hail2u/vim-css3-syntax
+vim-erlang/vim-erlang-runtime
+vim-erlang/vim-erlang-compiler
+vim-erlang/vim-erlang-omnicomplete
+vim-erlang/vim-erlang-tags
 airblade/vim-gitgutter
 andreimaxim/vim-io
 pangloss/vim-javascript
