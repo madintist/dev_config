@@ -5,6 +5,7 @@ git
 git-flow
 git-lfs
 gnupg
+gnu-prolog
 go
 gpg-agent
 hub
