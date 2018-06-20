@@ -16,4 +16,5 @@ andreimaxim/vim-io
 pangloss/vim-javascript
 plasticboy/vim-markdown
 simnalamburt/vim-mundo
+derekwyatt/vim-scala
 posva/vim-vue
