@@ -11,6 +11,7 @@ townk/vim-autoclose
 altercation/vim-colors-solarized
 hail2u/vim-css3-syntax
 airblade/vim-gitgutter
+andreimaxim/vim-io
 pangloss/vim-javascript
 plasticboy/vim-markdown
 simnalamburt/vim-mundo
