@@ -18,6 +18,7 @@ pinentry-mac
 python
 python@2
 ruby
+scala
 sqlite
 the_silver_searcher
 tldr
