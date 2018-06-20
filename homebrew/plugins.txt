@@ -1,5 +1,6 @@
 bat
 cmake
+erlang
 fzf -- /usr/local/opt/fzf/install
 git
 git-flow
