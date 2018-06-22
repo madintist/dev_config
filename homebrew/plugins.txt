@@ -1,14 +1,18 @@
 bat
+clojure
 cmake
+erlang
 fzf -- /usr/local/opt/fzf/install
 git
 git-flow
 git-lfs
 gnupg
+gnu-prolog
 go
 gpg-agent
 hub
 io
+leiningen
 multimarkdown
 neovim
 node
@@ -17,6 +21,7 @@ pinentry-mac
 python
 python@2
 ruby
+scala
 sqlite
 the_silver_searcher
 tldr

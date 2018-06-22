@@ -6,12 +6,20 @@ mattn/emmet-vim
 othree/javascript-libraries-syntax.vim
 autozimu/LanguageClient-neovim -- cd ~/.config/nvim/bundle/LanguageClient-neovim && bash install.sh
 stanangeloff/php.vim
+adimit/prolog.vim
 cakebaker/scss-syntax.vim
 townk/vim-autoclose
+vim-scripts/VimClojure
 altercation/vim-colors-solarized
 hail2u/vim-css3-syntax
+vim-erlang/vim-erlang-runtime
+vim-erlang/vim-erlang-compiler
+vim-erlang/vim-erlang-omnicomplete
+vim-erlang/vim-erlang-tags
 airblade/vim-gitgutter
+andreimaxim/vim-io
 pangloss/vim-javascript
 plasticboy/vim-markdown
 simnalamburt/vim-mundo
+derekwyatt/vim-scala
 posva/vim-vue
