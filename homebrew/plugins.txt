@@ -1,4 +1,5 @@
 bat
+clojure
 cmake
 erlang
 fzf -- /usr/local/opt/fzf/install
