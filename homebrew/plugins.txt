@@ -12,6 +12,7 @@ go
 gpg-agent
 hub
 io
+leiningen
 multimarkdown
 neovim
 node
