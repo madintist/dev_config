@@ -13,6 +13,7 @@ gpg-agent
 hub
 io
 leiningen
+manifoldco/brew/manifold-cli
 multimarkdown
 neovim
 node
