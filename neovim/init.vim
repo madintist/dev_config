@@ -31,9 +31,10 @@ set writebackup
 " }}}
 
 " Colors {{{
-colorscheme solarized " Use the Solarized colorscheme
-set background=dark   " Use the dark version of Solarized
-syntax enable         " Use syntax highlighting
+autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
+colorscheme solarized                     " Use the Solarized colorscheme
+set background=dark                       " Use the dark version of Solarized
+syntax enable                             " Use syntax highlighting
 " }}}
 
 " Folding {{{
