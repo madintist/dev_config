@@ -138,6 +138,8 @@ let g:LanguageClient_serverCommands = {
 " NERDTree {{{
 nnoremap <silent> <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+let NERDTreeQuitOnOpen = 1 " Close NERDTree when we open a file.
 " }}}
 
 " }}}
