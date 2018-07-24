@@ -135,6 +135,14 @@ let g:LanguageClient_serverCommands = {
       \}
 " }}}
 
+" NERDTree {{{
+nnoremap <silent> <Leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+let NERDTreeAutoDeleteBuffer = 1 " Automatically delete buffers for files we delete in NERDTree.
+let NERDTreeQuitOnOpen = 1 " Close NERDTree when we open a file.
+" }}}
+
 " }}}
 
 

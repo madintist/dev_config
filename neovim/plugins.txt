@@ -5,6 +5,8 @@ Shougo/deoplete.nvim -- pip3 install neovim
 mattn/emmet-vim
 othree/javascript-libraries-syntax.vim
 autozimu/LanguageClient-neovim -- cd ~/.config/nvim/bundle/LanguageClient-neovim && bash install.sh
+scrooloose/nerdtree
+Xuyuanp/nerdtree-git-plugin
 stanangeloff/php.vim
 adimit/prolog.vim
 cakebaker/scss-syntax.vim
