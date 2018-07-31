@@ -18,6 +18,7 @@ vim-erlang/vim-erlang-runtime
 vim-erlang/vim-erlang-compiler
 vim-erlang/vim-erlang-omnicomplete
 vim-erlang/vim-erlang-tags
+tpope/vim-fugitive
 airblade/vim-gitgutter
 andreimaxim/vim-io
 pangloss/vim-javascript
