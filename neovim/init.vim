@@ -80,6 +80,7 @@ set wildmenu       " Use the wildmenu autocomplete with :e
 nnoremap <leader><space> :nohlsearch<CR>             " Turn off search highlighting
 nnoremap <leader>a :Ack
 nnoremap <leader>n :call ToggleRelativeNumbers()<CR> " Toggle normal / relative line numbers
+nnoremap <leader>s :syntax sync fromstart<CR>        " Re-sync syntax highlighting
 nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
 
 " }}}
