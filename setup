@@ -30,7 +30,14 @@ check_dependency "language-server" "npm i javascript-typescript-langserver -g"
 # Install global ESLint and Vue plugin
 check_dependency "eslint" "npm i -g eslint eslint-plugin-vue"
 
-# HACK: This should be part of the Ruby setup file.
+# TODO: This should be part of the Node.js setup file
+# Install the Neovim NPM package
+if [[ ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+  printf "Installing neovim NPM package:\n"
+  npm i neovim -g
+fi
+
+# TODO: This should be part of the Ruby setup file.
 if [[ ! "$(gem list)" =~ "neovim" ]]; then
   printf "Installing the Neovim Ruby Gem:\n"
   gem install neovim
