@@ -56,3 +56,10 @@ I need to add documentation and/or automate this section.
 - `./neovim/setup`
   - This will do the initial setup for Neovim.
   - It will also run the `./neovim/plugins` script.
+
+### Node.js
+
+#### Scripts
+
+- `./node/setup`
+  - This will do the initial Node.js setup.
