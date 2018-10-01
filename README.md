@@ -59,7 +59,14 @@ I need to add documentation and/or automate this section.
 
 ### Node.js
 
+#### Files
+
+- `./node/plugins.txt`
+  - This is a list of the NPM modules that should be installed globally.
+
 #### Scripts
 
 - `./node/setup`
   - This will do the initial Node.js setup.
+- `./node/plugins`
+  - This will install all global NPM modules.
