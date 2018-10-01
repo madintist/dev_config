@@ -1,21 +1,5 @@
 #!/bin/bash
 
-# Argument $1: The name of the Homebrew package
-# Argument $2: Optional custom code to run instead of Homebrew install
-check_dependency () {
-  command -v "$1" >/dev/null 2>&1
-  if [[ ! "$?" -eq 0 ]]; then
-    if [[ -z "$2" ]]; then
-      printf "Installing %s\n" "$1"
-      brew update
-      brew install "$1"
-    else
-      printf "Executing custom commands:\n"
-      eval "$2"
-    fi
-  fi
-}
-
 # make sure that Node is installed
 command -v node >/dev/null 2>&1
 if [[ ! "$?" -eq 0 ]]; then
@@ -32,15 +16,5 @@ if [[ ! "$?" -eq 0 ]]; then
   exit 1
 fi
 
-# Install the Neovim NPM package
-if [[ ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
-  printf "Installing neovim NPM package:\n"
-  npm i neovim -g
-fi
-
-# Install prettier-standard (since we use this for work)
-check_dependency "prettier-standard" "npm i prettier-standard -g"
-check_dependency "language-server" "npm i javascript-typescript-langserver -g"
-
-# Install global ESLint and Vue plugin
-check_dependency "eslint" "npm i -g eslint eslint-plugin-vue"
+# Install plugins
+./node/plugins
