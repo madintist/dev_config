@@ -16,6 +16,22 @@ check_dependency () {
   fi
 }
 
+# make sure that Node is installed
+command -v node >/dev/null 2>&1
+if [[ ! "$?" -eq 0 ]]; then
+  printf "Node must be installed to run this script. aborting.\n"
+  printf "please run the homebrew setup script to install Node.\n"
+  exit 1
+fi
+
+# make sure that NPM is installed
+command -v npm >/dev/null 2>&1
+if [[ ! "$?" -eq 0 ]]; then
+  printf "NPM must be installed to run this script. aborting.\n"
+  printf "please run the homebrew setup script to install NPM.\n"
+  exit 1
+fi
+
 # Install the Neovim NPM package
 if [[ ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
   printf "Installing neovim NPM package:\n"
