@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/dev_config/scripts/functions
+
 printf "Running the Neovim setup script.\n\n"
 
 # This is the system directory where Neovim keeps it's configuration.
@@ -40,8 +42,7 @@ fi
 
 # If Node.js / NPM is available
 # install the neovim NPM package.
-command -v npm >/dev/null 2>&1
-if [[ "$?" -eq 0 && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+if [[ $(is_executable "npm") && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
   printf "Installing neovim NPM package:\n"
   npm i neovim -g
 fi

@@ -1,16 +1,18 @@
 #!/bin/bash
 
+source ~/dev_config/scripts/functions
+
+printf "Running the Node.js setup script.\n\n"
+
 # make sure that Node is installed
-command -v node >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
+if [[ ! $(is_executable "node") ]]; then
   printf "Node must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install Node.\n"
   exit 1
 fi
 
 # make sure that NPM is installed
-command -v npm >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
+if [[ ! $(is_executable "npm") ]]; then
   printf "NPM must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install NPM.\n"
   exit 1
@@ -18,3 +20,5 @@ fi
 
 # Install plugins
 ./node/plugins
+
+printf "Finished running the Node.js setup script.\n\n"

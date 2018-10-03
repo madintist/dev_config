@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/dev_config/scripts/functions
+
 # Neovim plugins are installed here.
 nvim_plugins=~/.config/nvim/bundle
 
@@ -62,8 +64,7 @@ load_plugins () {
 }
 
 # Make sure that Git is available
-command -v git >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
+if [[ ! $(is_executable "git") ]]; then
   printf "Git must be installed to run this script. Aborting.\n"
   exit 1
 fi
