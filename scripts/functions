@@ -1,1 +1,4 @@
 #!/bin/bash
+
+# TODO: is_executable Function to check for executable
+# TODO: read_plugin_file Function to read a .txt plugin file
