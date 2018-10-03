@@ -1,4 +1,3 @@
-bat
 clojure
 cmake
 erlang
