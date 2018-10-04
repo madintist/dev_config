@@ -1,7 +1,7 @@
 fzf -- ~/homebrew/opt/fzf/install
 git
 git-flow
-git-lfs
+git-lfs -- git lfs install
 gnupg
 gpg-agent
 hub
