@@ -1,4 +1,4 @@
-fzf -- /usr/local/opt/fzf/install
+fzf -- ~/homebrew/opt/fzf/install
 git
 git-flow
 git-lfs
