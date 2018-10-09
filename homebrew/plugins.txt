@@ -9,6 +9,7 @@ manifoldco/brew/manifold-cli
 multimarkdown
 neovim
 node
+node@8
 openssl
 pinentry-mac
 python
