@@ -3,7 +3,6 @@ git
 git-flow
 git-lfs -- git lfs install
 gnupg
-gpg-agent
 hub
 manifoldco/brew/manifold-cli
 multimarkdown
