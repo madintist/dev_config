@@ -1,11 +1,23 @@
 #!/bin/bash
 
+# make sure that Homebrew is installed
+command -v brew >/dev/null 2>&1
+if [[ ! "$?" -eq 0 ]]; then
+  printf "Homebrew must be installed to run this script. aborting.\n"
+  printf "please run the homebrew setup script to install Homebrew.\n"
+  exit 1
+fi
+
 # make sure that Node is installed
 command -v node >/dev/null 2>&1
 if [[ ! "$?" -eq 0 ]]; then
-  printf "Node must be installed to run this script. aborting.\n"
-  printf "please run the homebrew setup script to install Node.\n"
-  exit 1
+  brew update && brew upgrade
+  brew install node
+  brew install node@8
+  brew cleanup && brew prune
+else
+  brew update node
+  brew update node@8
 fi
 
 # make sure that NPM is installed
@@ -14,6 +26,9 @@ if [[ ! "$?" -eq 0 ]]; then
   printf "NPM must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install NPM.\n"
   exit 1
+else
+  # Update the NPM!
+  npm i npm@latest -g
 fi
 
 # Install plugins

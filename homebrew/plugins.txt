@@ -6,8 +6,6 @@ gnupg
 hub
 multimarkdown
 neovim
-node
-node@8
 openssl
 pinentry-mac
 python
