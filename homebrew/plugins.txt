@@ -9,7 +9,6 @@ neovim
 openssl
 pinentry-mac
 python
-python@2
 the_silver_searcher
 tldr
 tmux
