@@ -4,7 +4,6 @@ git-flow
 git-lfs -- git lfs install
 gnupg
 hub
-manifoldco/brew/manifold-cli
 multimarkdown
 neovim
 node
