@@ -30,5 +30,16 @@ else
   npm i npm@latest -g
 fi
 
+# set up NVM
+if [[ ! -d ~/.nvm ]]; then
+  mkdir ~/.nvm
+fi
+command -v nvm >/dev/null 2>&1
+if [[ ! "$?" -eq 0 ]]; then
+  brew install nvm
+else
+  brew update nvm
+fi
+
 # Install plugins
 ./node/plugins
