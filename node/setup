@@ -8,14 +8,6 @@ if [[ ! "$?" -eq 0 ]]; then
   exit 1
 fi
 
-# make sure that Node dependencies are installed
-command -v node >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
-  brew update && brew upgrade
-  brew install python@2 # This is a specific requirement for node to work
-  brew cleanup && brew prune
-fi
-
 # make sure that NPM is installed
 command -v npm >/dev/null 2>&1
 if [[ ! "$?" -eq 0 ]]; then
