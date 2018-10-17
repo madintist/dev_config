@@ -93,8 +93,14 @@ let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
 " }}}
 
 " ALE {{{
-let g:ale_fixers = {'javascript': ['prettier-standard']} " Use prettier-standard for JavaScript
-let g:ale_linters = {'javascript': ['']}
+let g:ale_fixers = {
+      \ 'javascript': ['prettier-standard'],
+      \ 'php': ['phpcbf'],
+      \}
+let g:ale_linters = {
+      \ 'javascript': [''],
+      \ 'php': ['phpcs'],
+      \}
 let g:ale_fix_on_save = 1                                " Fix files on save
 " }}}
 
