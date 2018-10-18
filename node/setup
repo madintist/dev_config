@@ -16,6 +16,20 @@ if [[ ! $(is_executable "npm") ]]; then
   printf "NPM must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install NPM.\n"
   exit 1
+else
+  # Update the NPM!
+  npm i npm@latest -g
+fi
+
+# set up NVM
+if [[ ! -d ~/.nvm ]]; then
+  mkdir ~/.nvm
+fi
+command -v nvm >/dev/null 2>&1
+if [[ ! "$?" -eq 0 ]]; then
+  brew install nvm
+else
+  brew upgrade nvm
 fi
 
 # Install plugins

@@ -1,29 +1,14 @@
-bat
-clojure
-cmake
-erlang
-fzf -- /usr/local/opt/fzf/install
+fzf -- ~/homebrew/opt/fzf/install
 git
 git-flow
-git-lfs
+git-lfs -- git lfs install
 gnupg
-gnu-prolog
-go
-gpg-agent
 hub
-io
-leiningen
-manifoldco/brew/manifold-cli
 multimarkdown
 neovim
-node
 openssl
 pinentry-mac
 python
-python@2
-ruby
-scala
-sqlite
 the_silver_searcher
 tldr
 tmux
