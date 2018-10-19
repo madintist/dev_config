@@ -42,7 +42,7 @@ fi
 
 # If Node.js / NPM is available
 # install the neovim NPM package.
-if [[ $(is_executable "npm") && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+if [[ -x $(which npm) && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
   printf "Installing neovim NPM package:\n"
   npm i neovim -g
 fi

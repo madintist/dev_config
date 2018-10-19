@@ -64,7 +64,7 @@ load_plugins () {
 }
 
 # Make sure that Git is available
-if [[ ! $(is_executable "git") ]]; then
+if [[ ! -x $(which git) ]]; then
   printf "Git must be installed to run this script. Aborting.\n"
   exit 1
 fi

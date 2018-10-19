@@ -5,14 +5,14 @@ source ~/dev_config/scripts/functions.sh
 printf "Running the Node.js setup script.\n\n"
 
 # make sure that Node is installed
-if [[ ! $(is_executable "node") ]]; then
+if [[ ! -x $(which node) ]]; then
   printf "Node must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install Node.\n"
   exit 1
 fi
 
 # make sure that NPM is installed
-if [[ ! $(is_executable "npm") ]]; then
+if [[ ! -x $(which npm) ]]; then
   printf "NPM must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install NPM.\n"
   exit 1
