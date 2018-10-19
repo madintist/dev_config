@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions
+source ~/dev_config/scripts/functions.sh
 
 # Neovim plugins are installed here.
 nvim_plugins=~/.config/nvim/bundle

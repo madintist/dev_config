@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions
+source ~/dev_config/scripts/functions.sh
 
 printf "Running the Node.js setup script.\n\n"
 
@@ -33,6 +33,6 @@ else
 fi
 
 # Install plugins
-./node/plugins
+./node/plugins.sh
 
 printf "Finished running the Node.js setup script.\n\n"

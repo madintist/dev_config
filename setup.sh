@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Run Homebrew setup
-./homebrew/setup
+./homebrew/setup.sh
 
 # Run Neovim setup
-./neovim/setup
+./neovim/setup.sh
 
 # Run Node.js setup
-./node/setup
+./node/setup.sh
 
 # TODO: This should be part of the Ruby setup file.
 if [[ ! "$(gem list)" =~ "neovim" ]]; then

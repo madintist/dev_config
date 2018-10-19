@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions
+source ~/dev_config/scripts/functions.sh
 
 printf "Running Homebrew setup script.\n\n"
 
@@ -24,6 +24,6 @@ if [[ ! $(is_executable "brew") ]]; then
 fi
 
 # Install Homebrew plugins (a.k.a packages)
-./homebrew/plugins
+./homebrew/plugins.sh
 
 printf "Finished with Homebrew setup script.\n\n"

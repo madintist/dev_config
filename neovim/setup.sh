@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions
+source ~/dev_config/scripts/functions.sh
 
 printf "Running the Neovim setup script.\n\n"
 
@@ -38,7 +38,7 @@ if [[ ! -f "$nvim_directory/autoload/pathogen.vim" ]]; then
 fi
 
 # Install Pathogen Plugins
-./neovim/plugins
+./neovim/plugins.sh
 
 # If Node.js / NPM is available
 # install the neovim NPM package.
