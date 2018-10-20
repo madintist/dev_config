@@ -1,18 +1,18 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions.sh
+source $HOME/dev_config/scripts/functions.sh
 
 printf "Running the Node.js setup script.\n\n"
 
 # make sure that Node is installed
-if [[ ! -x $(which node) ]]; then
+if [ ! $(is_executable "node") ]; then
   printf "Node must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install Node.\n"
   exit 1
 fi
 
 # make sure that NPM is installed
-if [[ ! -x $(which npm) ]]; then
+if [ ! $(is_executable "npm") ]; then
   printf "NPM must be installed to run this script. aborting.\n"
   printf "please run the homebrew setup script to install NPM.\n"
   exit 1
@@ -25,8 +25,8 @@ fi
 if [[ ! -d ~/.nvm ]]; then
   mkdir ~/.nvm
 fi
-command -v nvm >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
+
+if [ ! $(is_executable "nvm") ]; then
   brew install nvm
 else
   brew upgrade nvm
