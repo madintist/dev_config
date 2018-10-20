@@ -12,7 +12,7 @@ is_executable () {
     exit_code=1
   fi
 
-  return exit_code
+  return $exit_code
 }
 
 # TODO: read_plugin_file Function to read a .txt plugin file
