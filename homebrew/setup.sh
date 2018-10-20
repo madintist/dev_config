@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions.sh
+source $HOME/dev_config/scripts/functions.sh
 
 printf "Running Homebrew setup script.\n\n"
 
@@ -11,7 +11,7 @@ homebrew_directory=~/homebrew
 homebrew_url="https://github.com/Homebrew/brew/tarball/master"
 
 # Is Homebrew installed already?
-if [[ ! -x $(which brew) ]]; then
+if [ ! $(is_executable "brew") ]; then
   # If not we need to set it up.
 
   # Delete old $homebrew_directory if it's already there.
