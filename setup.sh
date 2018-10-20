@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $HOME/dev_config/scripts/functions.sh
+
 # Run Homebrew setup
 ./homebrew/setup.sh
 
@@ -32,8 +34,7 @@ cd ~
 # TODO: Temp patch to get manifold-cli installed in macOS Mojave.
 # This should go into some sort of Manifold setup script
 # (or just be installed with homebrew again)
-command -v manifold >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
+if [ ! $(is_executable "manifold") ]; then
   MANIFOLD_DIR=~
   curl -o- https://raw.githubusercontent.com/manifoldco/manifold-cli/master/install.sh | sh
 fi
