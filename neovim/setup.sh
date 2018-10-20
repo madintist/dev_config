@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dev_config/scripts/functions.sh
+source $HOME/dev_config/scripts/functions.sh
 
 printf "Running the Neovim setup script.\n\n"
 
@@ -42,7 +42,7 @@ fi
 
 # If Node.js / NPM is available
 # install the neovim NPM package.
-if [[ -x $(which npm) && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
+if [[ $(is_executable "npm") && ! "$(npm ls -g --depth=0)" =~ "neovim" ]]; then
   printf "Installing neovim NPM package:\n"
   npm i neovim -g
 fi
