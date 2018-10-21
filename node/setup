@@ -8,26 +8,18 @@ if [[ ! "$?" -eq 0 ]]; then
   exit 1
 fi
 
-# make sure that NPM is installed
-command -v npm >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
-  printf "NPM must be installed to run this script. aborting.\n"
-  printf "please run the homebrew setup script to install NPM.\n"
-  exit 1
-else
-  # Update the NPM!
-  npm i npm@latest -g
-fi
-
 # set up NVM
 if [[ ! -d ~/.nvm ]]; then
   mkdir ~/.nvm
 fi
+
 command -v nvm >/dev/null 2>&1
 if [[ ! "$?" -eq 0 ]]; then
   brew install nvm
+  nvm use node
 else
   brew upgrade nvm
+  nvm use node
 fi
 
 # Install plugins
