@@ -3,6 +3,8 @@
 # This function will check for
 # an executable's existence
 # $1 - The name of the executable to check for
+# Returns 0 if the executable exists,
+# 1 if it doesn't exist.
 is_executable () {
   exit_code=0
 
