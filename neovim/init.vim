@@ -94,6 +94,7 @@ let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
 
 " ALE {{{
 let g:ale_fixers = {
+      \ 'c': ['clang-format'],
       \ 'javascript': ['prettier-standard'],
       \ 'php': ['phpcbf'],
       \}
