@@ -103,6 +103,7 @@ let g:ale_linters = {
       \ 'php': ['phpcs'],
       \}
 let g:ale_fix_on_save = 1                                " Fix files on save
+let g:ale_c_clangformat_options = '--style="LLVM"'       " Use LLVM style formatting
 " }}}
 
 " CtrlP {{{
