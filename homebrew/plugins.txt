@@ -1,3 +1,4 @@
+clang-format
 fzf -- ~/homebrew/opt/fzf/install
 git
 git-flow
