@@ -54,6 +54,7 @@ set scrolloff=10          " Show 10 lines of context around cursor when scrollin
 highlight Comment cterm=italic
 highlight Statement cterm=italic
 highlight Type cterm=italic
+highlight Todo cterm=standout
 " }}}
 
 " Indentation {{{
