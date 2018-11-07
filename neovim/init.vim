@@ -35,7 +35,9 @@ autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighti
 colorscheme solarized                     " Use the Solarized colorscheme
 set background=dark                       " Use the dark version of Solarized
 syntax enable                             " Use syntax highlighting
-highlight Comment cterm=italic            " This should make comments italic
+highlight Comment cterm=italic
+highlight Statement cterm=italic
+highlight Type cterm=italic
 " }}}
 
 " Folding {{{
