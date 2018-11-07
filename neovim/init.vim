@@ -35,7 +35,6 @@ autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighti
 colorscheme solarized                     " Use the Solarized colorscheme
 set background=dark                       " Use the dark version of Solarized
 syntax enable                             " Use syntax highlighting
-highlight Comment cterm=italic            " This should make comments italic
 " }}}
 
 " Folding {{{
@@ -49,6 +48,13 @@ set foldnestmax=10    " Don't allow absurdly deep folding
 filetype plugin indent on " Set filetype based plugins and indentation to on
 set modelines=1           " Look for modelines in files
 set scrolloff=10          " Show 10 lines of context around cursor when scrolling
+" }}}
+
+" Highlighting {{{
+highlight Comment cterm=italic
+highlight Statement cterm=italic
+highlight Type cterm=italic
+highlight Todo cterm=standout
 " }}}
 
 " Indentation {{{
