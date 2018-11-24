@@ -33,8 +33,13 @@ set writebackup
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
 colorscheme solarized                     " Use the Solarized colorscheme
-set background=dark                       " Use the dark version of Solarized
 syntax enable                             " Use syntax highlighting
+
+if $ITERM_PROFILE == 'Solarized Light'
+  set background=light
+else
+  set background=dark
+endif
 " }}}
 
 " Folding {{{
