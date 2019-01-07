@@ -107,15 +107,16 @@ let g:ackprg = 'ag --vimgrep' " Use Ag in place of Ack
 " ALE {{{
 let g:ale_fixers = {
       \ 'c': ['clang-format'],
-      \ 'javascript': ['prettier-standard'],
+      \ 'javascript': ['standard'],
       \ 'php': ['phpcbf'],
       \}
 let g:ale_linters = {
-      \ 'javascript': [''],
+      \ 'javascript': ['standard'],
       \ 'php': ['phpcs'],
       \}
-let g:ale_fix_on_save = 1                                " Fix files on save
-let g:ale_c_clangformat_options = '--style="LLVM"'       " Use LLVM style formatting
+let g:ale_c_clangformat_options = '--style="LLVM"' " Use LLVM style formatting
+let g:ale_fix_on_save = 1                          " Fix files on save
+let g:ale_lint_on_save = 1                         " Lint files on save
 " }}}
 
 " CtrlP {{{
