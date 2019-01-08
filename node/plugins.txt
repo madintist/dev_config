@@ -2,4 +2,4 @@ eslint
 eslint-plugin-vue
 javascript-typescript-langserver
 neovim
-prettier-standard
+standard
