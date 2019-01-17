@@ -91,9 +91,12 @@ set wildmenu       " Use the wildmenu autocomplete with :e
 
 nnoremap <leader><space> :nohlsearch<CR>             " Turn off search highlighting
 nnoremap <leader>a :Ack
+nnoremap <leader>f :NERDTreeFind<CR>                 " Open NERDTree in the current file
 nnoremap <leader>n :call ToggleRelativeNumbers()<CR> " Toggle normal / relative line numbers
 nnoremap <leader>s :syntax sync fromstart<CR>        " Re-sync syntax highlighting
+nnoremap <leader>t :NERDTreeToggle<Enter>            " Toggle NERDTree (duh)
 nnoremap <leader>u :MundoToggle<CR>                  " Toggle Mundo undo panel
+
 
 " }}}
 
@@ -162,9 +165,6 @@ let g:vim_markdown_new_list_item_indent = 2
 " }}}
 
 " NERDTree {{{
-nnoremap <silent> <Leader>n :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>f :NERDTreeFind<CR>
-
 let NERDTreeAutoDeleteBuffer = 1 " Automatically delete buffers for files we delete in NERDTree.
 let NERDTreeQuitOnOpen = 1 " Close NERDTree when we open a file.
 " }}}
