@@ -34,12 +34,7 @@ set writebackup
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
 colorscheme solarized                     " Use the Solarized colorscheme
 syntax enable                             " Use syntax highlighting
-
-if $ITERM_PROFILE == 'Solarized Light'
-  set background=light
-else
-  set background=dark
-endif
+set background=light                      " Use light mode
 " }}}
 
 " Folding {{{
