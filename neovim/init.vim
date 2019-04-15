@@ -46,6 +46,7 @@ set foldnestmax=10    " Don't allow absurdly deep folding
 
 " General {{{
 filetype plugin indent on " Set filetype based plugins and indentation to on
+set colorcolumn=80        " Show a ruler at column 80
 set modelines=1           " Look for modelines in files
 set scrolloff=10          " Show 10 lines of context around cursor when scrolling
 " }}}
