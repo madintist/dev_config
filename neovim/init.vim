@@ -114,6 +114,7 @@ let g:ale_linters = {
       \ 'php': ['phpcs'],
       \}
 let g:ale_c_clangformat_options = '--style="LLVM"' " Use LLVM style formatting
+let g:ale_php_phpcs_standard = 'PSR2'              " Use the PSR2 standard for PHP
 let g:ale_fix_on_save = 1                          " Fix files on save
 let g:ale_lint_on_save = 1                         " Lint files on save
 " }}}
