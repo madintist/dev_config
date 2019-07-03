@@ -32,7 +32,7 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme solarized                     " Use the Solarized colorscheme
+colorscheme flattened_dark                " Use Solarized: Flattened
 syntax enable                             " Use syntax highlighting
 set background=light                      " Use light mode
 " }}}

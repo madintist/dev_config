@@ -3,6 +3,7 @@ w0rp/ale
 ctrlpvim/ctrlp.vim
 Shougo/deoplete.nvim -- pip3 install neovim
 mattn/emmet-vim
+romainl/flattened
 othree/javascript-libraries-syntax.vim
 autozimu/LanguageClient-neovim -- cd ~/.config/nvim/bundle/LanguageClient-neovim && bash install.sh
 scrooloose/nerdtree
