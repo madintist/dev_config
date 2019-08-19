@@ -32,9 +32,8 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme flattened_dark                " Use Solarized: Flattened
+colorscheme seti                          " Use Seti theme
 syntax enable                             " Use syntax highlighting
-set background=light                      " Use light mode
 " }}}
 
 " Folding {{{

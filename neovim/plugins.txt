@@ -9,9 +9,9 @@ scrooloose/nerdtree
 Xuyuanp/nerdtree-git-plugin
 stanangeloff/php.vim
 cakebaker/scss-syntax.vim
+trusktr/seti.vim
 godlygeek/tabular
 townk/vim-autoclose
-altercation/vim-colors-solarized
 hail2u/vim-css3-syntax
 tpope/vim-fugitive
 airblade/vim-gitgutter
