@@ -4,12 +4,12 @@ ctrlpvim/ctrlp.vim
 neoclide/coc.nvim
 mattn/emmet-vim
 romainl/flattened
+morhetz/gruvbox
 othree/javascript-libraries-syntax.vim
 scrooloose/nerdtree
 Xuyuanp/nerdtree-git-plugin
 stanangeloff/php.vim
 cakebaker/scss-syntax.vim
-trusktr/seti.vim
 godlygeek/tabular
 townk/vim-autoclose
 hail2u/vim-css3-syntax

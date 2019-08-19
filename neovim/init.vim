@@ -32,7 +32,7 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme seti                          " Use Seti theme
+colorscheme gruvbox                       " Use Gruvbox colors
 syntax enable                             " Use syntax highlighting
 " }}}
 
