@@ -20,4 +20,5 @@ pangloss/vim-javascript
 plasticboy/vim-markdown
 mustache/vim-mustache-handlebars
 simnalamburt/vim-mundo
+lumiliet/vim-twig
 posva/vim-vue
