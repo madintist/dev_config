@@ -4,7 +4,6 @@ git
 git-flow
 git-lfs -- git lfs install
 gnupg
-hub
 multimarkdown
 neovim
 openssl
