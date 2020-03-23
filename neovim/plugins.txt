@@ -14,6 +14,7 @@ keith/swift.vim
 godlygeek/tabular
 townk/vim-autoclose
 hail2u/vim-css3-syntax
+ejholmes/vim-forcedotcom
 tpope/vim-fugitive
 airblade/vim-gitgutter
 pangloss/vim-javascript
