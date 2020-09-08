@@ -1,25 +1,18 @@
 #!/bin/bash
 
 # Run Homebrew setup
-./homebrew/setup
+# NOTE: DISABLED
+# ./homebrew/setup
 
 # Run Neovim setup
 ./neovim/setup
 
 # Run Node.js setup
-./node/setup
+# NOTE: DISABLED
+# ./node/setup
 
 # TODO: This should be part of the Ruby setup file.
 if [[ ! "$(gem list)" =~ "neovim" ]]; then
   printf "Installing the Neovim Ruby Gem:\n"
   gem install neovim
-fi
-
-# TODO: Temp patch to get manifold-cli installed in macOS Mojave.
-# This should go into some sort of Manifold setup script
-# (or just be installed with homebrew again)
-command -v manifold >/dev/null 2>&1
-if [[ ! "$?" -eq 0 ]]; then
-  MANIFOLD_DIR=~
-  curl -o- https://raw.githubusercontent.com/manifoldco/manifold-cli/master/install.sh | sh
 fi
