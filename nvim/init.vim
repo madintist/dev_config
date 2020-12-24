@@ -33,6 +33,30 @@ Plug 'valloric/youcompleteme'
 call plug#end()
 " }}}
 
+" Plugin Configuration {{{
+
+" CtrlP {{{
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" }}}
+
+" Deoplete {{
+let g:deoplete#enable_at_startup = 1
+" }}
+
+" Gruvbox {{{
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+" }}}
+
+" Javascript {{{
+let g:javascript_plugin_jsdoc = 1
+" }}}
+
+" }}}
+
 " ----------
 
 " Basic Configuration {{{
@@ -86,7 +110,7 @@ set hlsearch  " Highlight search results
 " }}}
 
 " UI {{{
-set cursorline     " Highlight the current line
+" set cursorline     " Highlight the current line
 set lazyredraw     " Don't redraw the screen unless we have to
 set relativenumber " Show line numbers
 set showcmd        " Show the last command that we ran
@@ -113,31 +137,6 @@ nnoremap <leader>s :syntax sync fromstart<CR>
 " NERDTree {{{
 nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
-" }}}
-
-" }}}
-
-" ----------
-
-" Plugin Configuration {{{
-
-" CtrlP {{{
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" }}}
-
-" Deoplete {{
-let g:deoplete#enable_at_startup = 1
-" }}
-
-" Gruvbox {{{
-let g:gruvbox_italic = 1
-" }}}
-
-" Javascript {{{
-let g:javascript_plugin_jsdoc = 1
 " }}}
 
 " }}}
