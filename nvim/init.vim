@@ -24,6 +24,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'raimondi/delimitmate'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'posva/vim-vue'
@@ -33,6 +34,10 @@ call plug#end()
 " }}}
 
 " Plugin Configuration {{{
+
+" Airline {{{
+let g:airline_powerline_fonts = 1
+" }}}
 
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
