@@ -13,7 +13,7 @@ Run `$ brew install neovim` if necessary.
 
 #### Setup
 
-1. Run `$ ln -s ./nvim/init.vim ~/.config/nvim/init.vim`
+1. Run `$ ln -s "$PWD"/nvim/init.vim ~/.config/nvim/init.vim`
 2. Open Neovim and run `:PlugInstall`
 
 ### Tmux
@@ -25,4 +25,26 @@ Run `$ brew install tmux` to get Tmux.
 
 #### Setup
 
-1. Run `$ ln -s ./tmux/tmux.conf ~/.tmux.conf`
+1. Run `$ ln -s "$PWD"/tmux/tmux.conf ~/.tmux.conf`
+
+### Zsh
+
+See info on installing Zsh [here][installing-zsh].
+
+#### Setup
+
+1. Link `.zshrc`: `$ ln -s "$PWD"/zsh/zshrc ~/.zshrc`
+
+**Warning:** The current `.zshrc` assumes that you have a few other tools already installed.
+Documentation on those will be forthcoming. Here's a summary:
+
+- fzf (terminal fuzzy finder)
+- Google Cloud SDK
+- NVM (Node Version Manager)
+- Powerline
+- Z (Jump to frecent directories)
+- ZSH syntax highlighting script
+
+We also need docs for setting up `.zshenv` since that won't be added here.
+
+[installing-zsh]: https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#file-mac-md
