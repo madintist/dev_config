@@ -21,8 +21,8 @@ Run `$ brew install neovim` if necessary.
 **NOTE:** Tmux must be installed for this to make any sense.
 Run `$ brew install tmux` to get Tmux.
 
-- `./tmux/.tmux.conf`: Tmux config file.
+- `./tmux/tmux.conf`: Tmux config file.
 
 #### Setup
 
-1. Run `$ ln -s ./tmux/.tmux.conf ~/.tmux.conf`
+1. Run `$ ln -s ./tmux/tmux.conf ~/.tmux.conf`
