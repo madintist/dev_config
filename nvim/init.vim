@@ -37,6 +37,7 @@ call plug#end()
 
 " Airline {{{
 let g:airline_powerline_fonts = 1
+let g_airline_theme = 'gruvbox'
 " }}}
 
 " CtrlP {{{
