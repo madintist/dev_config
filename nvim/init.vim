@@ -24,6 +24,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'raimondi/delimitmate'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -76,7 +77,7 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme gruvbox                       " Use Gruvbox color scheme
+colorscheme nord
 syntax enable                             " Use syntax highlighting
 " }}}
 
