@@ -56,6 +56,10 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:deoplete#enable_at_startup = 1
 " }}
 
+" GitGutter {{{
+set updatetime=100
+" }}}
+
 " Gruvbox {{{
 let g:gruvbox_bold = 1
 let g:gruvbox_italic = 1
