@@ -85,7 +85,7 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme nord
+colorscheme gruvbox
 syntax enable                             " Use syntax highlighting
 " }}}
 
