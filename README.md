@@ -47,6 +47,4 @@ Documentation on those will be forthcoming. Here's a summary:
 
 We also need docs for setting up `.zshenv` since that won't be added here.
 
-ADDING SOME TEST TEXT TO SEE IF SIGNING WORKS
-
 [installing-zsh]: https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#file-mac-md
