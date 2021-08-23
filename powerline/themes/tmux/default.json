@@ -21,7 +21,10 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.net.hostname"
+				"function": "powerline.segments.common.vcs.branch",
+				"args": {
+					"status_colors": true
+				}
 			}
 		]
 	}
