@@ -25,6 +25,9 @@
 				"args": {
 					"status_colors": true
 				}
+			},
+			{
+				"function": "powerline.segments.common.vcs.stash"
 			}
 		]
 	}
