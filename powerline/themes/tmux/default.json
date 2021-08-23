@@ -21,10 +21,7 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.vcs.branch",
-				"args": {
-					"status_colors": true
-				}
+				"function": "powerline.segments.common.vcs.branch"
 			},
 			{
 				"function": "powerline.segments.common.vcs.stash"
