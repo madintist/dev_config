@@ -26,6 +26,7 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'heavenshell/vim-jsdoc', {
@@ -33,7 +34,6 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'posva/vim-vue'
-Plug 'valloric/youcompleteme'
 
 call plug#end()
 " }}}
@@ -85,8 +85,9 @@ set writebackup
 
 " Colors {{{
 autocmd BufEnter * :syntax sync fromstart " Automatically sync syntax highlighting
-colorscheme gruvbox
 syntax enable                             " Use syntax highlighting
+set background=dark
+colorscheme solarized
 " }}}
 
 " Folding {{{
