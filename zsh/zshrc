@@ -1,5 +1,5 @@
 # Bat
-BAT_THEME="Solarized (light)"
+BAT_THEME="Solarized (dark)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
