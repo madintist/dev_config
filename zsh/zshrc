@@ -1,5 +1,5 @@
 # Bat
-BAT_THEME="gruvbox-dark"
+BAT_THEME="Solarized (light)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
