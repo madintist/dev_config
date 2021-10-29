@@ -52,10 +52,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 " }}}
 
-" Deoplete {{
-let g:deoplete#enable_at_startup = 1
-" }}
-
 " GitGutter {{{
 set updatetime=100
 " }}}
