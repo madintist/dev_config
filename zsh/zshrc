@@ -1,6 +1,9 @@
 # Bat
 BAT_THEME="Solarized (dark)"
 
+# Composer
+export PATH="/Users/joshuakleveter/.composer/vendor/bin:$PATH"
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -16,6 +19,12 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 # Powerline
 powerline_root=/usr/local/lib/python3.9/site-packages
 . "$powerline_root"/powerline/bindings/zsh/powerline.zsh
+
+# Psysh
+export PSYSH_CONFIG="/Users/joshuakleveter/.config/psysh/config.php"
+
+# rbenv
+eval "$(rbenv init -)"
 
 # Z
 . /usr/local/etc/profile.d/z.sh
