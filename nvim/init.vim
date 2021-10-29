@@ -25,6 +25,7 @@ Plug 'raimondi/delimitmate'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'arcticicestudio/nord-vim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
@@ -63,6 +64,12 @@ let g:gruvbox_italic = 1
 
 " Javascript {{{
 let g:javascript_plugin_jsdoc = 1
+" }}}
+
+"LSP {{{
+lua << EOF
+require'lspconfig'.tsserver.setup{}
+EOF
 " }}}
 
 " }}}
