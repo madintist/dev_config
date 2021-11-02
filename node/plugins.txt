@@ -1,5 +1,0 @@
-eslint
-eslint-plugin-vue
-javascript-typescript-langserver
-neovim
-standard
