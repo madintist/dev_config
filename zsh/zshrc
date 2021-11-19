@@ -12,7 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Oh-My-Zsh
 export ZSH="/Users/joshuakleveter/.oh-my-zsh"
-ZSH_THEME="apple"
+ZSH_THEME="flazz"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
