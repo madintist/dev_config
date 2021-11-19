@@ -2,7 +2,7 @@
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # NVM
@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 # Oh-My-Zsh
 export ZSH="/Users/joshuakleveter/.oh-my-zsh"
 ZSH_THEME="flazz"
-plugins=(git)
+plugins=(fzf git gh nvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 
