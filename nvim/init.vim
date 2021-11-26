@@ -1,5 +1,7 @@
 " Vim Plug
 call plug#begin(stdpath('data') . '/plugged')
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lua/completion-nvim'
 	Plug 'preservim/nerdtree'
 call plug#end()
 
