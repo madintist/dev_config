@@ -16,6 +16,9 @@ ZSH_THEME="flazz"
 plugins=(fzf git gh nvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
+# PHP 7.4
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 
 # Z
 . /usr/local/etc/profile.d/z.sh
