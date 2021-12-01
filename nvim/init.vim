@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'preservim/nerdtree'
 call plug#end()
 
+
 " Plugin Settings
 
 " Gruvbox
