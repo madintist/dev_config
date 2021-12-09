@@ -6,6 +6,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	" Tools
 	" - Editorconfig
 	Plug 'editorconfig/editorconfig-vim'
+	" - Indent Guides
+	Plug 'nathanaelkane/vim-indent-guides'
 	" - NERDTree
 	Plug 'preservim/nerdtree'
 	" - Telescope
@@ -19,6 +21,9 @@ call plug#end()
 
 " Gruvbox
 let g:gruvbox_italic = '1'
+
+" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1
 
 " NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
