@@ -8,6 +8,10 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'editorconfig/editorconfig-vim'
 	" - Indent Guides
 	Plug 'nathanaelkane/vim-indent-guides'
+	" - LSP
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'jose-elias-alvarez/null-ls.nvim'
+	Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 	" - NERDTree
 	Plug 'preservim/nerdtree'
 	" - Telescope
