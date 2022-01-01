@@ -8,6 +8,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'editorconfig/editorconfig-vim'
 	" - Indent Guides
 	Plug 'nathanaelkane/vim-indent-guides'
+	" - LSP
+	Plug 'neovim/nvim-lspconfig'
 	" - NERDTree
 	Plug 'preservim/nerdtree'
 	" - Telescope
@@ -24,6 +26,11 @@ let g:gruvbox_italic = '1'
 
 " Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1
+
+" LSP
+lua << EOF
+require'lspconfig'.tsserver.setup{}
+EOF
 
 " NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
