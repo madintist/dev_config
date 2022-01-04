@@ -60,7 +60,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 
-nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>t <cmd>NERDTreeToggle<CR>
+nnoremap <leader>f <cmd>NERDTreeFind<CR>
 
 nnoremap <F2> <cmd>lua vim.lsp.buf.rename()<CR>
