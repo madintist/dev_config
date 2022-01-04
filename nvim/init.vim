@@ -34,6 +34,10 @@ set completeopt=menu,menuone,noselect
 set relativenumber
 
 
+" Keybindings
+nnoremap <leader><Space> <cmd>nohlsearch<cr>
+
+
 " Plugin Settings
 
 " CMP
