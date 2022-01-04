@@ -34,10 +34,6 @@ set completeopt=menu,menuone,noselect
 set relativenumber
 
 
-" Keybindings
-nnoremap <leader><Space> <cmd>nohlsearch<cr>
-
-
 " Plugin Settings
 
 " CMP
@@ -55,13 +51,16 @@ require'lspconfig'.jsonls.setup{}
 require'lspconfig'.tsserver.setup{}
 EOF
 
-" NERDTree
+
+" Keybindings
+nnoremap <leader><Space> <cmd>nohlsearch<CR>
+
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
+
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
-" Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
+nnoremap <F2> <cmd>lua vim.lsp.buf.rename()<CR>
