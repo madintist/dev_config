@@ -12,6 +12,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'hrsh7th/nvim-cmp'
 	" - Editorconfig
 	Plug 'editorconfig/editorconfig-vim'
+	" - Fugitive
+	Plug 'tpope/vim-fugitive'
 	" - GitGutter
 	Plug 'airblade/vim-gitgutter'
 	" - Indent Guides
