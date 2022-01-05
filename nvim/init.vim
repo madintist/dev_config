@@ -67,3 +67,4 @@ nnoremap <leader>t <cmd>NERDTreeToggle<CR>
 nnoremap <leader>f <cmd>NERDTreeFind<CR>
 
 nnoremap <F2> <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <F12> <cmd>lua vim.lsp.buf.definition()<CR>
