@@ -12,6 +12,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'hrsh7th/nvim-cmp'
 	" - Editorconfig
 	Plug 'editorconfig/editorconfig-vim'
+	" - GitGutter
+	Plug 'airblade/vim-gitgutter'
 	" - Indent Guides
 	Plug 'nathanaelkane/vim-indent-guides'
 	" - LSP
@@ -32,6 +34,7 @@ call plug#end()
 colorscheme gruvbox
 set completeopt=menu,menuone,noselect
 set relativenumber
+set updatetime=100
 
 
 " Plugin Settings
