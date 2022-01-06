@@ -22,6 +22,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'neovim/nvim-lspconfig'
 	" - NERDTree
 	Plug 'preservim/nerdtree'
+	" - Svelte
+	Plug 'evanleck/vim-svelte'
 	" - Telescope
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-telescope/telescope.nvim'
