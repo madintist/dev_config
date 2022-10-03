@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
 	-- Themes
 	use 'morhetz/gruvbox' -- Gruvbox
 
+	-- LSP
+	use 'neovim/nvim-lspconfig'
+
 	-- Languages
 	use 'evanleck/vim-svelte' -- Svelte
 

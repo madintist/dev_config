@@ -1,5 +1,6 @@
 -- Requires
 require('plugins')
+require('lsp')
 
 -- Vim Core Settings
 vim.opt.completeopt = menu,menuone,noselect
