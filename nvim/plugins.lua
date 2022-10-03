@@ -5,7 +5,13 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Themes
-	use 'morhetz/gruvbox'
+	use 'morhetz/gruvbox' -- Gruvbox
+
+	-- Languages
+	use 'evanleck/vim-svelte' -- Svelte
+
+	-- Git
+	use 'airblade/vim-gitgutter' -- Git Gutter
 
 	-- Indent Guides
 	use 'nathanaelkane/vim-indent-guides'
