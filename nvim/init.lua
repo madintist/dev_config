@@ -1,4 +1,3 @@
--- Requires
 require('load-plugins')
 require('lsp')
 
