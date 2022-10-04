@@ -1,5 +1,5 @@
 -- Requires
-require('plugins')
+require('load-plugins')
 require('lsp')
 
 -- Vim Core Settings
