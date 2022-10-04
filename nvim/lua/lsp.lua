@@ -1,6 +1,7 @@
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
+
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -37,10 +38,35 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
+-- Lua
+require('lspconfig').sumneko_lua.setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+	settings = {
+		Lua = {
+			rumtime = {
+				version = 'LuaJIT',
+			},
+			diagnostics = {
+				globals = {'vim'},
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			telemetry = {
+				enable = false,
+			},
+		}
+	}
+}
+
+-- Svelte
 require('lspconfig').svelte.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
 }
+
+-- TSServer (TypeScript/JavaScript)
 require('lspconfig').tsserver.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
