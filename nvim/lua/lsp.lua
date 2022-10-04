@@ -38,10 +38,14 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
+-- Connect LSP & CMP
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 -- Lua
 require('lspconfig').sumneko_lua.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
+	capabilities = capabilities,
 	settings = {
 		Lua = {
 			rumtime = {
@@ -64,24 +68,12 @@ require('lspconfig').sumneko_lua.setup{
 require('lspconfig').svelte.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
+	capabilities = capabilities,
 }
 
 -- TSServer (TypeScript/JavaScript)
 require('lspconfig').tsserver.setup{
 	on_attach = on_attach,
 	flags = lsp_flags,
+	capabilities = capabilities,
 }
-
--- require('lspconfig')['pyright'].setup{
---     on_attach = on_attach,
---     flags = lsp_flags,
--- }
-
--- require('lspconfig')['rust_analyzer'].setup{
---     on_attach = on_attach,
---     flags = lsp_flags,
---     -- Server-specific settings...
---     settings = {
---       ["rust-analyzer"] = {}
---     }
--- }
