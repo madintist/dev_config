@@ -5,6 +5,12 @@ else
   export EDITOR='nvim'
 fi
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# LSD
+alias ls="lsd" 
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -19,6 +25,10 @@ source $ZSH/oh-my-zsh.sh
 # PHP 7.4
 export PATH="/usr/local/opt/php@7.4/bin:$PATH"
 export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
+# PNPM
+export PNPM_HOME="/Users/joshuakleveter/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 # Z
 . /usr/local/etc/profile.d/z.sh
