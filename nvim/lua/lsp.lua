@@ -61,6 +61,13 @@ require('lspconfig').sumneko_lua.setup{
 	}
 }
 
+-- PHP (Intelephense)
+require('lspconfig').intelephense.setup{
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+}
+
 -- Svelte
 require('lspconfig').svelte.setup{
 	on_attach = on_attach,
