@@ -3,7 +3,6 @@ require('plugins')
 require('lsp')
 
 -- Vim Core Settings
-vim.opt.completeopt = menu,menuone,noselect
 vim.opt.relativenumber = true
 vim.opt.updatetime = 100
 
