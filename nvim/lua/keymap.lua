@@ -3,5 +3,6 @@ vim.keymap.set('n', '<space>ff', '<cmd>Telescope find_files<CR>', { noremap = tr
 vim.keymap.set('n', '<space>fg', '<cmd>Telescope live_grep<CR>', { noremap = true })
 vim.keymap.set('n', '<space>fb', '<cmd>Telescope buffers<CR>', { noremap = true })
 vim.keymap.set('n', '<space>fh', '<cmd>Telescope help_tags<CR>', { noremap = true })
+vim.keymap.set('n', '<space>ls', '<cmd>Telescope lsp_document_symbols<CR>', { noremap = true })
 vim.keymap.set('n', '<space>t', '<cmd>NERDTreeToggle<CR>', { noremap = true })
 vim.keymap.set('n', '<space>f', '<cmd>NERDTreeFind<CR>', { noremap = true })
