@@ -12,3 +12,28 @@ vim.opt.updatetime = 100
 vim.cmd [[silent! colorscheme gruvbox]]
 vim.api.nvim_set_var('gruvbox_italic', '1')
 vim.api.nvim_set_var('indent_guides_enable_on_vim_startup', 1)
+
+-- Autocmds
+vim.api.nvim_create_autocmd(
+	{
+		"VimEnter",
+		"WinEnter",
+		"BufWinEnter"
+	},
+	{
+		command = [[
+			setlocal cursorline
+			setlocal cursorcolumn
+		]]
+	}
+)
+
+vim.api.nvim_create_autocmd(
+	"WinLeave",
+	{
+		command = [[
+			setlocal nocursorline
+			setlocal nocursorcolumn
+		]]
+	}
+)
