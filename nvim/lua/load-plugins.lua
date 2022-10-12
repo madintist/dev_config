@@ -23,7 +23,12 @@ return require('packer').startup(function(use)
 	use 'evanleck/vim-svelte' -- Svelte
 
 	-- Git
-	use 'airblade/vim-gitgutter' -- Git Gutter
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end
+	}
 
 	-- Indent Guides
 	use 'nathanaelkane/vim-indent-guides'
