@@ -28,8 +28,13 @@ return require('packer').startup(function(use)
 	-- Indent Guides
 	use 'nathanaelkane/vim-indent-guides'
 
-	-- NERDTree
-	use 'preservim/nerdtree'
+	-- nvim-tree
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons'
+		}
+	}
 
 	-- Telescope
 	use {

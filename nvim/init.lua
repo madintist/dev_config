@@ -13,6 +13,11 @@ vim.cmd [[silent! colorscheme gruvbox]]
 vim.api.nvim_set_var('gruvbox_italic', '1')
 vim.api.nvim_set_var('indent_guides_enable_on_vim_startup', 1)
 
+-- For nvim-tree
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+require('nvim-tree').setup()
+
 -- Autocmds
 vim.api.nvim_create_autocmd(
 	{
