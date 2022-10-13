@@ -2,8 +2,8 @@
 vim.keymap.set('n', '<space>h', '<cmd>nohlsearch<CR>', { desc = 'Clear highlighted search results', noremap = true })
 
 -- nvim-tree
-vim.keymap.set('n', '<space>t', '<cmd>NvimTreeToggle<CR>', { noremap = true })
-vim.keymap.set('n', '<space>f', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
+vim.keymap.set('n', '<space>tt', '<cmd>NvimTreeToggle<CR>', { noremap = true })
+vim.keymap.set('n', '<space>tf', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
 
 -- Telescope
 vim.keymap.set('n', '<space>ff', '<cmd>Telescope find_files<CR>', { noremap = true })
