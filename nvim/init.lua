@@ -1,7 +1,7 @@
-require('keymap')
 require('load-plugins')
 require('lsp')
 require('nvim-cmp')
+require('keymap')
 
 -- Vim Core Settings
 vim.opt.completeopt = 'menu,menuone,noselect'
