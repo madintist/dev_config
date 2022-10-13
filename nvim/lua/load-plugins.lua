@@ -4,6 +4,14 @@ return require('packer').startup(function(use)
 	-- Packer
 	use 'wbthomason/packer.nvim'
 
+	use {
+		'folke/trouble.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
+		config = function()
+			require('trouble').setup()
+		end
+	}
+
 	-- Themes
 	use 'morhetz/gruvbox' -- Gruvbox
 
