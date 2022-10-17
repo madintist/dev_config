@@ -1,4 +1,5 @@
 -- Core
+vim.keymap.set('n', '<space>cb', '<cmd>bdelete<CR>', { noremap = true })
 vim.keymap.set('n', '<space>h', '<cmd>nohlsearch<CR>', { desc = 'Clear highlighted search results', noremap = true })
 
 -- Scripts
