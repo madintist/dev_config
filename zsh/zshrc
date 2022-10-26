@@ -1,4 +1,6 @@
 # General Config
+set -o vi
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
