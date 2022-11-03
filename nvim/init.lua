@@ -7,6 +7,7 @@ require('keymap')
 vim.opt.completeopt = 'menu,menuone,noselect'
 vim.opt.relativenumber = true
 vim.opt.updatetime = 100
+vim.opt.wrap = false
 
 -- Plugin Settings
 vim.cmd [[silent! colorscheme gruvbox]]
